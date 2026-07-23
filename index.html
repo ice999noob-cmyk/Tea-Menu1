@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tea Shop Menu</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f7f8fa;
+      margin: 0;
+      padding: 15px;
+      color: #1a1a1a;
+    }
+    .container {
+      max-width: 480px; /* Mobile screen preview */
+      margin: 0 auto;
+    }
+    .header {
+      text-align: center;
+      padding: 20px 0 15px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      color: #2c3e50;
+      font-weight: 800;
+    }
+    .header p {
+      margin: 5px 0 0;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+    }
+    /* Menu Item Card - FineDine Style */
+    .menu-card {
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      margin-bottom: 20px;
+      transition: transform 0.2s ease;
+    }
+    .menu-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .card-content {
+      padding: 16px;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .item-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 0;
+      color: #2c3e50;
+    }
+    .price {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #2e7d32;
+      background: #e8f5e9;
+      padding: 6px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .description {
+      font-size: 0.88rem;
+      color: #666;
+      margin: 0;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>🫖 Artisan Tea Menu</h1>
+      <p>Freshly Brewed & Premium Selection</p>
+    </div>
+
+    <!-- Tea Item 1 -->
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=600&q=80" alt="Iced Matcha Latte">
+      <div class="card-content">
+        <div class="item-header">
+          <h2 class="item-title">Iced Matcha Latte</h2>
+          <span class="price">24 SAR</span>
+        </div>
+        <p class="description">Premium ceremonial Uji matcha whisked fresh with fresh milk and vanilla syrup.</p>
+      </div>
+    </div>
+
+    <!-- Tea Item 2 -->
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80" alt="Iced Peach Tea">
+      <div class="card-content">
+        <div class="item-header">
+          <h2 class="item-title">Iced Peach Black Tea</h2>
+          <span class="price">18 SAR</span>
+        </div>
+        <p class="description">Cold-brewed Ceylon black tea infused with sweet peach puree and mint leaves.</p>
+      </div>
+    </div>
+
+    <!-- Tea Item 3 -->
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80" alt="Special Karak Tea">
+      <div class="card-content">
+        <div class="item-header">
+          <h2 class="item-title">Special Karak Tea</h2>
+          <span class="price">12 SAR</span>
+        </div>
+        <p class="description">Rich black tea slow-simmered with evaporated milk, cardamom, and saffron.</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
