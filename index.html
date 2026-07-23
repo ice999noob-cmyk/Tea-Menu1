@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tea Shop Menu</title>
+  <title>Tea & Pastry Shop Menu</title>
   <style>
     * { box-sizing: border-box; }
     body {
@@ -14,12 +14,12 @@
       color: #1a1a1a;
     }
     .container {
-      max-width: 480px; /* Mobile screen preview */
+      max-width: 480px;
       margin: 0 auto;
     }
     .header {
       text-align: center;
-      padding: 20px 0 15px;
+      padding: 20px 0 10px;
     }
     .header h1 {
       margin: 0;
@@ -32,14 +32,40 @@
       color: #7f8c8d;
       font-size: 0.9rem;
     }
-    /* Menu Item Card - FineDine Style */
+
+    /* Category Filter Buttons */
+    .filter-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    .filter-btn {
+      background-color: #ffffff;
+      border: 2px solid #e2e8f0;
+      padding: 8px 18px;
+      border-radius: 25px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #4a5568;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background-color: #2e7d32;
+      border-color: #2e7d32;
+      color: #ffffff;
+    }
+
+    /* Menu Cards */
     .menu-card {
       background: #ffffff;
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.06);
       margin-bottom: 20px;
-      transition: transform 0.2s ease;
+      display: block;
+      transition: opacity 0.3s ease;
     }
     .menu-card img {
       width: 100%;
@@ -77,53 +103,99 @@
       margin: 0;
       line-height: 1.4;
     }
+
+    /* Helper class to hide items when filtered */
+    .hidden {
+      display: none !important;
+    }
   </style>
 </head>
 <body>
 
   <div class="container">
     <div class="header">
-      <h1>🫖 Artisan Tea Menu</h1>
-      <p>Freshly Brewed & Premium Selection</p>
+      <h1>🫖 Tea & Bakery</h1>
+      <p>Freshly Brewed & Baked Daily</p>
     </div>
 
-    <!-- Tea Item 1 -->
-    <div class="menu-card">
+    <!-- Category Filter Buttons -->
+    <div class="filter-container">
+      <button class="filter-btn active" onclick="filterMenu('all')">All</button>
+      <button class="filter-btn" onclick="filterMenu('drinks')">Drinks</button>
+      <button class="filter-btn" onclick="filterMenu('pastries')">Pastries</button>
+    </div>
+
+    <!-- DRINKS SECTION -->
+    <div class="menu-card drinks">
       <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=600&q=80" alt="Iced Matcha Latte">
       <div class="card-content">
         <div class="item-header">
           <h2 class="item-title">Iced Matcha Latte</h2>
           <span class="price">24 SAR</span>
         </div>
-        <p class="description">Premium ceremonial Uji matcha whisked fresh with fresh milk and vanilla syrup.</p>
+        <p class="description">Premium ceremonial Uji matcha whisked fresh with milk and vanilla syrup.</p>
       </div>
     </div>
 
-    <!-- Tea Item 2 -->
-    <div class="menu-card">
-      <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80" alt="Iced Peach Tea">
+    <div class="menu-card drinks">
+      <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80" alt="Iced Peach Black Tea">
       <div class="card-content">
         <div class="item-header">
           <h2 class="item-title">Iced Peach Black Tea</h2>
           <span class="price">18 SAR</span>
         </div>
-        <p class="description">Cold-brewed Ceylon black tea infused with sweet peach puree and mint leaves.</p>
+        <p class="description">Cold-brewed Ceylon black tea infused with sweet peach puree and mint.</p>
       </div>
     </div>
 
-    <!-- Tea Item 3 -->
-    <div class="menu-card">
-      <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80" alt="Special Karak Tea">
+    <!-- PASTRIES SECTION -->
+    <div class="menu-card pastries">
+      <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80" alt="Butter Croissant">
       <div class="card-content">
         <div class="item-header">
-          <h2 class="item-title">Special Karak Tea</h2>
-          <span class="price">12 SAR</span>
+          <h2 class="item-title">Butter Croissant</h2>
+          <span class="price">14 SAR</span>
         </div>
-        <p class="description">Rich black tea slow-simmered with evaporated milk, cardamom, and saffron.</p>
+        <p class="description">Flaky, golden French butter croissant baked fresh every morning.</p>
+      </div>
+    </div>
+
+    <div class="menu-card pastries">
+      <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=600&q=80" alt="Pistachio Danish">
+      <div class="card-content">
+        <div class="item-header">
+          <h2 class="item-title">Pistachio Danish</h2>
+          <span class="price">19 SAR</span>
+        </div>
+        <p class="description">Crispy puff pastry filled with rich pistachio cream and crushed pistachios.</p>
       </div>
     </div>
 
   </div>
+
+  <!-- JavaScript Filter Logic -->
+  <script>
+    function filterMenu(category) {
+      // Update active button state
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      // Filter cards
+      const cards = document.querySelectorAll('.menu-card');
+      cards.forEach(card => {
+        if (category === 'all') {
+          card.classList.remove('hidden');
+        } else {
+          if (card.classList.contains(category)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
