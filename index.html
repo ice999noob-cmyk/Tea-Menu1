@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tea & Pastry Shop Menu</title>
+  <title>The Warm Teapot & Bakery Menu</title>
   <style>
     * { box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #f7f8fa;
+      /* Warm Cream Background */
+      background-color: #faf3e0; 
       margin: 0;
       padding: 15px;
-      color: #1a1a1a;
+      /* Deep Brown Text */
+      color: #3e2723; 
     }
     .container {
       max-width: 480px;
@@ -19,21 +21,23 @@
     }
     .header {
       text-align: center;
-      padding: 20px 0 10px;
+      padding: 25px 0 10px;
     }
     .header h1 {
       margin: 0;
-      font-size: 1.6rem;
-      color: #2c3e50;
+      font-size: 1.7rem;
+      /* Deep Caramel Brown Header */
+      color: #795548; 
       font-weight: 800;
     }
     .header p {
       margin: 5px 0 0;
-      color: #7f8c8d;
-      font-size: 0.9rem;
+      /* Slightly muted warm brown */
+      color: #8d6e63; 
+      font-size: 0.95rem;
     }
 
-    /* Category Filter Buttons */
+    /* Warm Category Filter Buttons */
     .filter-container {
       display: flex;
       justify-content: center;
@@ -41,28 +45,35 @@
       margin: 20px 0;
     }
     .filter-btn {
-      background-color: #ffffff;
-      border: 2px solid #e2e8f0;
-      padding: 8px 18px;
+      /* Bright White Button */
+      background-color: #ffffff; 
+      /* Light Tan Border */
+      border: 2px solid #e0d1b6; 
+      padding: 9px 20px;
       border-radius: 25px;
       font-size: 0.95rem;
       font-weight: 600;
-      color: #4a5568;
+      /* Warm Brown Text */
+      color: #5d4037; 
       cursor: pointer;
       transition: all 0.2s ease;
     }
+    /* Active/Hover State: Warm Gold/Caramel */
     .filter-btn.active, .filter-btn:hover {
-      background-color: #2e7d32;
-      border-color: #2e7d32;
+      /* Caramel Brown Background */
+      background-color: #a1887f; 
+      border-color: #a1887f;
       color: #ffffff;
     }
 
     /* Menu Cards */
     .menu-card {
-      background: #ffffff;
+      /* Stark White Card */
+      background: #ffffff; 
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      /* Soft shadows */
+      box-shadow: 0 4px 15px rgba(121, 85, 72, 0.1); 
       margin-bottom: 20px;
       display: block;
       transition: opacity 0.3s ease;
@@ -74,37 +85,41 @@
       display: block;
     }
     .card-content {
-      padding: 16px;
+      padding: 18px;
     }
     .item-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
     .item-title {
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 700;
       margin: 0;
-      color: #2c3e50;
+      /* Deep Rich Brown Title */
+      color: #4e342e; 
     }
     .price {
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 700;
-      color: #2e7d32;
-      background: #e8f5e9;
-      padding: 6px 12px;
+      /* Deep Wine Red Price */
+      color: #880e4f; 
+      /* Soft Peach Price Background */
+      background: #fce4ec; 
+      padding: 6px 14px;
       border-radius: 20px;
       white-space: nowrap;
     }
     .description {
-      font-size: 0.88rem;
-      color: #666;
+      font-size: 0.9rem;
+      /* Muted Warm Brown Description */
+      color: #6d4c41; 
       margin: 0;
-      line-height: 1.4;
+      line-height: 1.5;
     }
 
-    /* Class used to hide items when filtered */
+    /* Helper class to hide items when filtered */
     .hidden {
       display: none !important;
     }
@@ -114,8 +129,8 @@
 
   <div class="container">
     <div class="header">
-      <h1>🫖 Tea & Bakery</h1>
-      <p>Freshly Brewed & Baked Daily</p>
+      <h1>🫖 The Warm Teapot & Bakery</h1>
+      <p>A Cozy Selection Baked fresh & Brewed Daily</p>
     </div>
 
     <!-- Category Filter Buttons -->
