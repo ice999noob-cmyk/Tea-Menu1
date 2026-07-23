@@ -104,7 +104,7 @@
       line-height: 1.4;
     }
 
-    /* Helper class to hide items when filtered */
+    /* Class used to hide items when filtered */
     .hidden {
       display: none !important;
     }
@@ -176,7 +176,7 @@
   <!-- JavaScript Filter Logic -->
   <script>
     function filterMenu(category) {
-      // Update active button state
+      // Highlight active button
       const buttons = document.querySelectorAll('.filter-btn');
       buttons.forEach(btn => btn.classList.remove('active'));
       event.target.classList.add('active');
