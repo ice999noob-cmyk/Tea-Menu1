@@ -35,11 +35,9 @@
     body {
       margin: 0;
       padding: 18px;
-
       min-height: 100vh;
 
       font-family: 'Cairo', Arial, sans-serif;
-
       color: #2d180c;
 
       background-color: #160c06;
@@ -77,7 +75,6 @@
       text-align: center;
 
       padding: 24px 15px;
-
       margin-bottom: 20px;
 
       background:
@@ -88,7 +85,6 @@
         );
 
       border: 2px solid #a86b27;
-
       border-radius: 18px;
 
       box-shadow:
@@ -98,22 +94,16 @@
 
     .header h1 {
       margin: 0;
-
       color: #3a1806;
-
       font-size: 2rem;
-
       font-weight: 800;
     }
 
 
     .header p {
       margin: 6px 0 0;
-
       color: #71441e;
-
       font-size: 0.95rem;
-
       font-weight: 700;
     }
 
@@ -124,13 +114,9 @@
 
     .filter-container {
       display: flex;
-
       justify-content: center;
-
       flex-wrap: wrap;
-
       gap: 10px;
-
       margin-bottom: 22px;
     }
 
@@ -148,19 +134,15 @@
       color: #351505;
 
       padding: 11px 22px;
-
       min-height: 50px;
 
       border-radius: 30px;
 
       font-family: 'Cairo', Arial, sans-serif;
-
       font-size: 1rem;
-
       font-weight: 800;
 
       cursor: pointer;
-
       touch-action: manipulation;
 
       box-shadow:
@@ -184,7 +166,6 @@
         );
 
       color: #ffe7b5;
-
       border-color: #d99b46;
     }
 
@@ -202,7 +183,6 @@
         );
 
       border: 1px solid #b47732;
-
       border-radius: 18px;
 
       overflow: hidden;
@@ -216,15 +196,12 @@
 
     .menu-image {
       width: 100%;
-
       height: 300px;
 
       object-fit: cover;
-
       display: block;
 
       cursor: pointer;
-
       touch-action: manipulation;
     }
 
@@ -235,7 +212,7 @@
 
 
     .card-content {
-      padding: 17px 20px 20px;
+      padding: 17px 20px 15px;
     }
 
 
@@ -245,7 +222,6 @@
       color: #381705;
 
       font-size: 1.45rem;
-
       font-weight: 800;
     }
 
@@ -256,10 +232,29 @@
       color: #694322;
 
       font-size: 0.95rem;
-
       line-height: 1.7;
-
       font-weight: 600;
+    }
+
+
+    /* ========================================
+       CALORIES
+    ======================================== */
+
+    .calories {
+      margin-top: 12px;
+      padding-top: 8px;
+
+      border-top: 1px solid rgba(120, 73, 32, 0.18);
+
+      color: #8a5628;
+
+      font-family: Arial, 'Cairo', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+
+      text-align: left;
+      direction: rtl;
     }
 
 
@@ -329,7 +324,6 @@
       z-index: 1000000;
 
       border: 2px solid #d29a4e;
-
       border-radius: 50%;
 
       background: rgba(48, 21, 7, 0.92);
@@ -337,13 +331,11 @@
       color: white;
 
       font-size: 38px;
-
       line-height: 45px;
 
       font-family: Arial, sans-serif;
 
       cursor: pointer;
-
       touch-action: manipulation;
 
       box-shadow:
@@ -357,7 +349,7 @@
 
 
     /* ========================================
-       TABLET / LARGE SCREEN
+       TABLET
     ======================================== */
 
     @media (min-width: 700px) {
@@ -366,49 +358,43 @@
         padding: 22px;
       }
 
-
       .container {
         max-width: 720px;
       }
-
 
       .header {
         padding: 28px 20px;
       }
 
-
       .header h1 {
         font-size: 2.35rem;
       }
-
 
       .header p {
         font-size: 1.05rem;
       }
 
-
       .menu-image {
         height: 350px;
       }
-
 
       .item-title {
         font-size: 1.65rem;
       }
 
-
       .item-desc {
         font-size: 1.05rem;
       }
 
+      .calories {
+        font-size: 0.82rem;
+      }
 
       .filter-btn {
         font-size: 1.05rem;
-
         padding: 12px 26px;
       }
     }
-
 
   </style>
 
@@ -492,6 +478,10 @@
         فطيرة مخبوزة طازجة محشوة بجبنة العكاوي الغنية.
       </p>
 
+      <div class="calories">
+        تقريباً 450 سعرة حرارية لكل قطعة
+      </div>
+
     </div>
 
   </div>
@@ -516,6 +506,10 @@
       <p class="item-desc">
         فطيرة ساخنة محشوة بالجبن ومغطاة بقطع الشيبس المقرمشة.
       </p>
+
+      <div class="calories">
+        تقريباً 500 سعرة حرارية لكل قطعة
+      </div>
 
     </div>
 
@@ -542,6 +536,10 @@
         فطيرة بيتزا بعجينة طازجة مع صوص الطماطم، الجبن، وشرائح الببروني.
       </p>
 
+      <div class="calories">
+        تقريباً 500 سعرة حرارية لكل قطعة
+      </div>
+
     </div>
 
   </div>
@@ -566,6 +564,10 @@
       <p class="item-desc">
         بيتزا كلاسيكية مخبوزة بصلصة الطماطم وجبنة الموزاريلا الذائبة.
       </p>
+
+      <div class="calories">
+        تقريباً 450 سعرة حرارية لكل قطعة
+      </div>
 
     </div>
 
@@ -592,6 +594,10 @@
         فطيرة بيتزا مشكلة بالخضار الطازجة، الزيتون، وجبنة الموزاريلا.
       </p>
 
+      <div class="calories">
+        تقريباً 400 سعرة حرارية لكل قطعة
+      </div>
+
     </div>
 
   </div>
@@ -616,6 +622,10 @@
       <p class="item-desc">
         فطيرة سبانخ تقليدية محشوة بالسبانخ الطازجة والسماق.
       </p>
+
+      <div class="calories">
+        تقريباً 300 سعرة حرارية لكل قطعة
+      </div>
 
     </div>
 
@@ -706,9 +716,7 @@
 
 
 
-<!-- =====================================
-     FULLSCREEN IMAGE
-====================================== -->
+<!-- FULLSCREEN IMAGE -->
 
 <div id="imageModal" class="modal">
 
@@ -731,224 +739,186 @@
 
 <script>
 
-  /*
-    Written this way intentionally so it also works
-    with older tablet browsers.
-  */
+document.addEventListener("DOMContentLoaded", function () {
 
 
-  document.addEventListener("DOMContentLoaded", function () {
+  /* FILTER MENU */
+
+  var filterButtons =
+    document.querySelectorAll(".filter-btn");
+
+  var menuCards =
+    document.querySelectorAll(".menu-card");
 
 
-    /* ==========================
-       FILTER MENU
-    ========================== */
+  for (var i = 0; i < filterButtons.length; i++) {
 
-    var filterButtons =
-      document.querySelectorAll(".filter-btn");
+    filterButtons[i].addEventListener(
+      "click",
+      function () {
 
-    var menuCards =
-      document.querySelectorAll(".menu-card");
-
-
-    for (var i = 0; i < filterButtons.length; i++) {
-
-      filterButtons[i].addEventListener(
-        "click",
-        function () {
-
-          var category =
-            this.getAttribute("data-filter");
+        var category =
+          this.getAttribute("data-filter");
 
 
-          /* Remove active button */
+        for (
+          var b = 0;
+          b < filterButtons.length;
+          b++
+        ) {
 
-          for (
-            var b = 0;
-            b < filterButtons.length;
-            b++
-          ) {
+          filterButtons[b].classList.remove(
+            "active"
+          );
 
-            filterButtons[b].classList.remove(
-              "active"
+        }
+
+
+        this.classList.add("active");
+
+
+        for (
+          var c = 0;
+          c < menuCards.length;
+          c++
+        ) {
+
+          if (category === "all") {
+
+            menuCards[c].classList.remove(
+              "hidden"
             );
 
           }
 
-
-          /* Activate selected button */
-
-          this.classList.add("active");
-
-
-          /* Show correct items */
-
-          for (
-            var c = 0;
-            c < menuCards.length;
-            c++
+          else if (
+            menuCards[c].classList.contains(
+              category
+            )
           ) {
 
-            if (category === "all") {
+            menuCards[c].classList.remove(
+              "hidden"
+            );
 
-              menuCards[c].classList.remove(
-                "hidden"
-              );
+          }
 
-            }
+          else {
 
-            else if (
-              menuCards[c].classList.contains(
-                category
-              )
-            ) {
-
-              menuCards[c].classList.remove(
-                "hidden"
-              );
-
-            }
-
-            else {
-
-              menuCards[c].classList.add(
-                "hidden"
-              );
-
-            }
+            menuCards[c].classList.add(
+              "hidden"
+            );
 
           }
 
         }
-      );
 
-    }
+      }
+    );
 
-
-
-    /* ==========================
-       FULLSCREEN IMAGES
-    ========================== */
-
-    var images =
-      document.querySelectorAll(".menu-image");
-
-    var modal =
-      document.getElementById("imageModal");
-
-    var modalImage =
-      document.getElementById("modalImage");
-
-    var closeButton =
-      document.getElementById("closeModal");
-
-
-    for (var j = 0; j < images.length; j++) {
-
-      images[j].addEventListener(
-        "click",
-        function () {
-
-          /*
-            Loads the ORIGINAL image file.
-            It is not using the smaller card size.
-          */
-
-          modalImage.src = this.src;
-
-          modal.classList.add("show");
-
-          document.body.style.overflow =
-            "hidden";
-
-        }
-      );
-
-    }
+  }
 
 
 
-    /* ==========================
-       CLOSE FULLSCREEN
-    ========================== */
+  /* FULLSCREEN IMAGES */
 
-    function closeImage() {
+  var images =
+    document.querySelectorAll(".menu-image");
 
-      modal.classList.remove("show");
+  var modal =
+    document.getElementById("imageModal");
 
-      modalImage.src = "";
+  var modalImage =
+    document.getElementById("modalImage");
 
-      document.body.style.overflow = "";
+  var closeButton =
+    document.getElementById("closeModal");
 
-    }
 
+  for (var j = 0; j < images.length; j++) {
 
-    closeButton.addEventListener(
+    images[j].addEventListener(
       "click",
-      function (event) {
+      function () {
 
-        event.stopPropagation();
+        modalImage.src = this.src;
+
+        modal.classList.add("show");
+
+        document.body.style.overflow =
+          "hidden";
+
+      }
+    );
+
+  }
+
+
+  function closeImage() {
+
+    modal.classList.remove("show");
+
+    modalImage.src = "";
+
+    document.body.style.overflow = "";
+
+  }
+
+
+  closeButton.addEventListener(
+    "click",
+    function (event) {
+
+      event.stopPropagation();
+
+      closeImage();
+
+    }
+  );
+
+
+  modal.addEventListener(
+    "click",
+    function (event) {
+
+      if (event.target === modal) {
 
         closeImage();
 
       }
-    );
+
+    }
+  );
 
 
-    /*
-      Tap the dark area to close
-    */
+  modalImage.addEventListener(
+    "click",
+    function (event) {
 
-    modal.addEventListener(
-      "click",
-      function (event) {
+      event.stopPropagation();
 
-        if (event.target === modal) {
-
-          closeImage();
-
-        }
-
-      }
-    );
+    }
+  );
 
 
-    /*
-      Don't close when tapping image
-    */
+  document.addEventListener(
+    "keydown",
+    function (event) {
 
-    modalImage.addEventListener(
-      "click",
-      function (event) {
+      if (
+        event.key === "Escape" ||
+        event.keyCode === 27
+      ) {
 
-        event.stopPropagation();
+        closeImage();
 
       }
-    );
+
+    }
+  );
 
 
-    /*
-      ESC key on computer
-    */
-
-    document.addEventListener(
-      "keydown",
-      function (event) {
-
-        if (
-          event.key === "Escape" ||
-          event.keyCode === 27
-        ) {
-
-          closeImage();
-
-        }
-
-      }
-    );
-
-
-  });
+});
 
 </script>
 
