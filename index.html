@@ -1,289 +1,1012 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+        content="width=device-width,
+        initial-scale=1.0,
+        maximum-scale=5.0,
+        user-scalable=yes">
+
   <title>عتيق شاهي ومخبوزات</title>
-  
-  <!-- Arabic Font: Cairo -->
+
+  <!-- Arabic Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
-    * { box-sizing: border-box; }
-    
-    body {
-      font-family: 'Cairo', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      /* Seamless Dark Brown Wood Finish Background */
-      background: #1c100b url('https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=1200&q=80') center/cover fixed no-repeat;
-      margin: 0;
-      padding: 15px;
-      color: #2c1a14;
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 18px;
+
+      font-family: 'Cairo', Arial, sans-serif;
+
+      color: #2d1a10;
+
+      /*
+        DARK WOOD BACKGROUND
+
+        Upload the wood image to GitHub
+        and name it:
+
+        wood-bg.png
+      */
+
+      background-color: #160d08;
+      background-image:
+        linear-gradient(
+          rgba(15, 7, 4, 0.25),
+          rgba(15, 7, 4, 0.25)
+        ),
+        url("wood-bg.png");
+
+      background-repeat: repeat;
+      background-size: 300px 300px;
+
+      min-height: 100vh;
+    }
+
+
+    /* ========================================
+       MAIN CONTAINER
+    ======================================== */
+
     .container {
-      max-width: 500px;
+      width: 100%;
+      max-width: 650px;
       margin: 0 auto;
     }
 
-    /* Header Styling */
+
+    /* ========================================
+       HEADER
+    ======================================== */
+
     .header {
+
       text-align: center;
-      padding: 20px 15px 15px;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 16px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #f5ead7,
+          #e7d1ac
+        );
+
+      border: 2px solid #8a5a2b;
+
+      border-radius: 18px;
+
+      padding: 22px 15px;
+
       margin-bottom: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+
+      box-shadow:
+        0 8px 25px rgba(0,0,0,0.55);
     }
 
     .header h1 {
+
       margin: 0;
-      font-size: 1.9rem;
-      color: #3b1e0b;
+
+      font-size: 2rem;
+
+      color: #32190d;
+
       font-weight: 800;
     }
 
     .header p {
-      margin: 4px 0 0;
-      color: #614332;
-      font-size: 0.95rem;
+
+      margin: 5px 0 0;
+
+      color: #6b4426;
+
+      font-size: 1rem;
+
       font-weight: 700;
     }
 
-    /* Filter Buttons */
+
+    /* ========================================
+       FILTER BUTTONS
+    ======================================== */
+
     .filter-container {
+
       display: flex;
+
       justify-content: center;
+
+      flex-wrap: wrap;
+
       gap: 10px;
-      margin-bottom: 20px;
+
+      margin-bottom: 22px;
     }
+
 
     .filter-btn {
-      background-color: rgba(255, 255, 255, 0.9);
-      border: 2px solid #523018;
-      padding: 8px 18px;
-      border-radius: 25px;
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #3b1e0b;
+
+      appearance: none;
+      -webkit-appearance: none;
+
+      border: 2px solid #b58a50;
+
+      background:
+        linear-gradient(
+          145deg,
+          #f7ecd9,
+          #ddc298
+        );
+
+      color: #32190d;
+
+      border-radius: 30px;
+
+      padding: 11px 20px;
+
+      min-height: 48px;
+
+      font-family: 'Cairo', Arial, sans-serif;
+
+      font-size: 1rem;
+
+      font-weight: 800;
+
       cursor: pointer;
-      font-family: 'Cairo', sans-serif;
-      transition: all 0.2s ease;
+
+      touch-action: manipulation;
+
+      box-shadow:
+        0 5px 12px rgba(0,0,0,0.35);
+
+      transition:
+        transform 0.15s ease,
+        background 0.15s ease,
+        color 0.15s ease;
     }
 
-    .filter-btn.active, .filter-btn:hover {
-      background-color: #3b1e0b;
-      border-color: #3b1e0b;
-      color: #ffffff;
+
+    .filter-btn:active {
+
+      transform: scale(0.96);
     }
 
-    /* Menu Item Cards */
+
+    .filter-btn.active {
+
+      background:
+        linear-gradient(
+          145deg,
+          #5b3218,
+          #2e160b
+        );
+
+      color: #f8e5bd;
+
+      border-color: #d1a35c;
+    }
+
+
+    /* ========================================
+       MENU CARDS
+    ======================================== */
+
     .menu-card {
-      background: rgba(255, 255, 255, 0.96);
-      border-radius: 16px;
+
+      background:
+        linear-gradient(
+          160deg,
+          #f8efdf,
+          #e8d2ad
+        );
+
+      border-radius: 18px;
+
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-      margin-bottom: 20px;
-      transition: transform 0.2s ease;
+
+      border: 1px solid #aa7b43;
+
+      margin-bottom: 22px;
+
+      box-shadow:
+        0 10px 25px rgba(0,0,0,0.55);
+
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
     }
+
+
+    .image-button {
+
+      display: block;
+
+      width: 100%;
+
+      padding: 0;
+
+      margin: 0;
+
+      border: 0;
+
+      background: none;
+
+      cursor: pointer;
+
+      touch-action: manipulation;
+    }
+
 
     .menu-card img {
+
       width: 100%;
-      height: 250px;
+
+      height: 270px;
+
       object-fit: cover;
+
       display: block;
-      cursor: pointer;
+
+      pointer-events: none;
     }
+
+
+    .image-button:active {
+
+      opacity: 0.9;
+    }
+
 
     .card-content {
-      padding: 16px 18px;
+
+      padding: 17px 20px 20px;
     }
+
 
     .item-title {
-      font-size: 1.35rem;
+
+      margin: 0 0 6px;
+
+      font-size: 1.45rem;
+
       font-weight: 800;
-      margin: 0 0 6px 0;
-      color: #2b1406;
+
+      color: #351a0c;
     }
+
 
     .item-desc {
-      font-size: 0.92rem;
-      color: #503422;
+
       margin: 0;
-      line-height: 1.5;
+
+      font-size: 0.95rem;
+
+      line-height: 1.7;
+
       font-weight: 600;
+
+      color: #65472f;
     }
 
+
+    /* Hidden category */
+
     .hidden {
+
       display: none !important;
     }
 
-    /* Extra Large Fullscreen Pop-up Viewer */
+
+    /* ========================================
+       FULLSCREEN IMAGE VIEWER
+    ======================================== */
+
     .modal {
+
       display: none;
+
       position: fixed;
-      z-index: 9999;
-      left: 0;
+
+      z-index: 99999;
+
       top: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.93);
+
+      left: 0;
+
+      right: 0;
+
+      bottom: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      background: rgba(10, 5, 2, 0.96);
+
       justify-content: center;
+
       align-items: center;
-      padding: 10px;
+
+      padding: 20px;
     }
+
+
+    .modal.show {
+
+      display: flex;
+    }
+
 
     .modal-img {
-      max-width: 98vw;
-      max-height: 92vh;
-      border-radius: 12px;
+
+      display: block;
+
+      max-width: 96vw;
+
+      max-height: 90vh;
+
       object-fit: contain;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+
+      border-radius: 14px;
+
+      border: 2px solid #b88a4a;
+
+      box-shadow:
+        0 0 35px rgba(0,0,0,0.9);
     }
+
 
     .close-btn {
-      position: absolute;
+
+      position: fixed;
+
       top: 15px;
+
       right: 20px;
-      color: #ffffff;
-      font-size: 40px;
+
+      width: 52px;
+
+      height: 52px;
+
+      border-radius: 50%;
+
+      border: 2px solid #d5ad72;
+
+      background: #3b1e0f;
+
+      color: white;
+
+      font-size: 34px;
+
       font-weight: bold;
+
+      line-height: 42px;
+
       cursor: pointer;
-      line-height: 1;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+
+      z-index: 100000;
+
+      touch-action: manipulation;
     }
+
+
+    .close-btn:active {
+
+      transform: scale(0.94);
+    }
+
+
+    /* ========================================
+       TABLET
+    ======================================== */
+
+    @media (min-width: 700px) {
+
+      .container {
+
+        max-width: 720px;
+      }
+
+      .menu-card img {
+
+        height: 350px;
+      }
+
+      .header h1 {
+
+        font-size: 2.3rem;
+      }
+
+      .item-title {
+
+        font-size: 1.6rem;
+      }
+
+      .item-desc {
+
+        font-size: 1.05rem;
+      }
+
+      .filter-btn {
+
+        font-size: 1.05rem;
+
+        padding: 12px 24px;
+      }
+    }
+
+
   </style>
+
 </head>
+
+
 <body>
 
-  <div class="container">
-    <div class="header">
-      <h1>عتيق شاهي ومخبوزات</h1>
-      <p>مخبوزات طازجة ومشروبات دافئة يومياً</p>
-    </div>
 
-    <!-- Filter Category Buttons -->
-    <div class="filter-container">
-      <button class="filter-btn active" onclick="filterMenu('all', event)">الكل</button>
-      <button class="filter-btn" onclick="filterMenu('drinks', event)">المشروبات</button>
-      <button class="filter-btn" onclick="filterMenu('pastries', event)">الفطائر والمخبوزات</button>
-    </div>
+<div class="container">
 
-    <!-- PASTRIES -->
-    <div class="menu-card pastries">
-      <img src="akaiw fatir.jpeg" alt="فطيره عكاوي" onclick="openFullscreen(this.src)">
-      <div class="card-content">
-        <h2 class="item-title">فطيره عكاوي</h2>
-        <p class="item-desc">فطيرة مخبوزة طازجة محشوة بجبنة العكاوي الغنية.</p>
-      </div>
-    </div>
 
-    <div class="menu-card pastries">
-      <img src="chips fatrai.jpeg" alt="فطيره شيبس" onclick="openFullscreen(this.src)">
-      <div class="card-content">
-        <h2 class="item-title">فطيره شيبس</h2>
-        <p class="item-desc">فطيرة ساخنة محشوة بالجبن ومغطاة بقطع الشيبس المقرمشة.</p>
-      </div>
-    </div>
+  <!-- ======================================
+       HEADER
+  ======================================= -->
 
-    <div class="menu-card pastries">
-      <img src="peperion pizza.jpeg" alt="فطيره بيتزا ببروني" onclick="openFullscreen(this.src)">
-      <div class="card-content">
-        <h2 class="item-title">فطيره بيتزا ببروني</h2>
-        <p class="item-desc">فطيرة بيتزا بعجينة طازجة مع صوص الطماطم، الجبن، وشرائح الببروني.</p>
-      </div>
-    </div>
+  <div class="header">
 
-    <div class="menu-card pastries">
-      <img src="pizza normal.jpeg" alt="فطيره بيتزا" onclick="openFullscreen(this.src)">
-      <div class="card-content">
-        <h2 class="item-title">فطيره بيتزا</h2>
-        <p class="item-desc">بيتزا كلاسيكية مخبوزة بصلصة الطماطم وجبنة الموزاريلا الذائبة.</p>
-      </div>
-    </div>
+    <h1>عتيق شاهي ومخبوزات</h1>
 
-    <div class="menu-card pastries">
-      <img src="pizza vegtable.jpeg" alt="فطيره بيتزا خضار" onclick="openFullscreen(this.src)">
-      <div class="card-content">
-        <h2 class="item-title">فطيره بيتزا خضار</h2>
-        <p class="item-desc">فطيرة بيتزا مشكلة بالخضار الطازجة، الزيتون، وجبنة الموزاريلا.</p>
-      </div>
-    </div>
+    <p>
+      مخبوزات طازجة ومشروبات دافئة يومياً
+    </p>
 
-    <div class="menu-card pastries">
-      <img src="spiacnhe fatri.jpeg" alt="فطيره سبانخ" onclick="openFullscreen(this.src)">
-      <div class="card-content">
-        <h2 class="item-title">فطيره سبانخ</h2>
-        <p class="item-desc">فطيرة سبانخ تقليدية محشوة بالسبانخ الطازجة والسماق.</p>
-      </div>
-    </div>
+  </div>
 
-    <!-- DRINKS -->
-    <div class="menu-card drinks">
-      <img src="coffe dala.jpeg" alt="دله قهوه" onclick="openFullscreen(this.src)">
-      <div class="card-content">
-        <h2 class="item-title">دله قهوه</h2>
-        <p class="item-desc">دلة قهوة سعودية أصيلة مع الهيل وتقدم مع التمر.</p>
-      </div>
-    </div>
 
-    <div class="menu-card drinks">
-      <img src="kakate.jpeg" alt="كركديه" onclick="openFullscreen(this.src)">
-      <div class="card-content">
-        <h2 class="item-title">كركديه</h2>
-        <p class="item-desc">مشروب الكركديه المنعش والأحمر الطبيعي.</p>
-      </div>
-    </div>
 
-    <div class="menu-card drinks">
-      <img src="ice tea peach.jpeg" alt="ايستي خوخ" onclick="openFullscreen(this.src)">
-      <div class="card-content">
-        <h2 class="item-title">ايستي خوخ</h2>
-        <p class="item-desc">أيس تي بارد ومنعش بنكهة الخوخ الطبيعية.</p>
-      </div>
+  <!-- ======================================
+       CATEGORY BUTTONS
+  ======================================= -->
+
+  <div class="filter-container">
+
+    <button
+      type="button"
+      class="filter-btn active"
+      data-filter="all">
+
+      الكل
+
+    </button>
+
+
+    <button
+      type="button"
+      class="filter-btn"
+      data-filter="drinks">
+
+      المشروبات
+
+    </button>
+
+
+    <button
+      type="button"
+      class="filter-btn"
+      data-filter="pastries">
+
+      الفطائر والمخبوزات
+
+    </button>
+
+  </div>
+
+
+
+  <!-- ======================================
+       PASTRIES
+  ======================================= -->
+
+
+  <!-- عكاوي -->
+
+  <div class="menu-card pastries">
+
+    <button
+      type="button"
+      class="image-button"
+      data-image="akaiw fatir.jpeg">
+
+      <img
+        src="akaiw fatir.jpeg"
+        alt="فطيره عكاوي">
+
+    </button>
+
+
+    <div class="card-content">
+
+      <h2 class="item-title">
+        فطيره عكاوي
+      </h2>
+
+      <p class="item-desc">
+        فطيرة مخبوزة طازجة محشوة بجبنة العكاوي الغنية.
+      </p>
+
     </div>
 
   </div>
 
-  <!-- Fullscreen Modal Container -->
-  <div id="imageModal" class="modal" onclick="closeFullscreen()">
-    <span class="close-btn">&times;</span>
-    <img id="modalImage" class="modal-img" src="" alt="Full Screen View">
+
+
+  <!-- شيبس -->
+
+  <div class="menu-card pastries">
+
+    <button
+      type="button"
+      class="image-button"
+      data-image="chips fatrai.jpeg">
+
+      <img
+        src="chips fatrai.jpeg"
+        alt="فطيره شيبس">
+
+    </button>
+
+
+    <div class="card-content">
+
+      <h2 class="item-title">
+        فطيره شيبس
+      </h2>
+
+      <p class="item-desc">
+        فطيرة ساخنة محشوة بالجبن ومغطاة بقطع الشيبس المقرمشة.
+      </p>
+
+    </div>
+
   </div>
 
-  <script>
-    function filterMenu(category, event) {
-      const buttons = document.querySelectorAll('.filter-btn');
-      buttons.forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
 
-      const cards = document.querySelectorAll('.menu-card');
-      cards.forEach(card => {
-        if (category === 'all') {
-          card.classList.remove('hidden');
-        } else {
-          if (card.classList.contains(category)) {
-            card.classList.remove('hidden');
-          } else {
-            card.classList.add('hidden');
-          }
-        }
+
+  <!-- ببروني -->
+
+  <div class="menu-card pastries">
+
+    <button
+      type="button"
+      class="image-button"
+      data-image="peperion pizza.jpeg">
+
+      <img
+        src="peperion pizza.jpeg"
+        alt="فطيره بيتزا ببروني">
+
+    </button>
+
+
+    <div class="card-content">
+
+      <h2 class="item-title">
+        فطيره بيتزا ببروني
+      </h2>
+
+      <p class="item-desc">
+        فطيرة بيتزا بعجينة طازجة مع صوص الطماطم، الجبن، وشرائح الببروني.
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- بيتزا -->
+
+  <div class="menu-card pastries">
+
+    <button
+      type="button"
+      class="image-button"
+      data-image="pizza normal.jpeg">
+
+      <img
+        src="pizza normal.jpeg"
+        alt="فطيره بيتزا">
+
+    </button>
+
+
+    <div class="card-content">
+
+      <h2 class="item-title">
+        فطيره بيتزا
+      </h2>
+
+      <p class="item-desc">
+        بيتزا كلاسيكية مخبوزة بصلصة الطماطم وجبنة الموزاريلا الذائبة.
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- بيتزا خضار -->
+
+  <div class="menu-card pastries">
+
+    <button
+      type="button"
+      class="image-button"
+      data-image="pizza vegtable.jpeg">
+
+      <img
+        src="pizza vegtable.jpeg"
+        alt="فطيره بيتزا خضار">
+
+    </button>
+
+
+    <div class="card-content">
+
+      <h2 class="item-title">
+        فطيره بيتزا خضار
+      </h2>
+
+      <p class="item-desc">
+        فطيرة بيتزا مشكلة بالخضار الطازجة، الزيتون، وجبنة الموزاريلا.
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- سبانخ -->
+
+  <div class="menu-card pastries">
+
+    <button
+      type="button"
+      class="image-button"
+      data-image="spiacnhe fatri.jpeg">
+
+      <img
+        src="spiacnhe fatri.jpeg"
+        alt="فطيره سبانخ">
+
+    </button>
+
+
+    <div class="card-content">
+
+      <h2 class="item-title">
+        فطيره سبانخ
+      </h2>
+
+      <p class="item-desc">
+        فطيرة سبانخ تقليدية محشوة بالسبانخ الطازجة والسماق.
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+
+  <!-- ======================================
+       DRINKS
+  ======================================= -->
+
+
+  <!-- قهوة -->
+
+  <div class="menu-card drinks">
+
+    <button
+      type="button"
+      class="image-button"
+      data-image="coffe dala.jpeg">
+
+      <img
+        src="coffe dala.jpeg"
+        alt="دله قهوه">
+
+    </button>
+
+
+    <div class="card-content">
+
+      <h2 class="item-title">
+        دله قهوه
+      </h2>
+
+      <p class="item-desc">
+        دلة قهوة سعودية أصيلة مع الهيل وتقدم مع التمر.
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- كركديه -->
+
+  <div class="menu-card drinks">
+
+    <button
+      type="button"
+      class="image-button"
+      data-image="kakate.jpeg">
+
+      <img
+        src="kakate.jpeg"
+        alt="كركديه">
+
+    </button>
+
+
+    <div class="card-content">
+
+      <h2 class="item-title">
+        كركديه
+      </h2>
+
+      <p class="item-desc">
+        مشروب الكركديه المنعش والأحمر الطبيعي.
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ايس تي خوخ -->
+
+  <div class="menu-card drinks">
+
+    <button
+      type="button"
+      class="image-button"
+      data-image="ice tea peach.jpeg">
+
+      <img
+        src="ice tea peach.jpeg"
+        alt="ايستي خوخ">
+
+    </button>
+
+
+    <div class="card-content">
+
+      <h2 class="item-title">
+        ايستي خوخ
+      </h2>
+
+      <p class="item-desc">
+        أيس تي بارد ومنعش بنكهة الخوخ الطبيعية.
+      </p>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+
+
+<!-- ======================================
+     FULLSCREEN IMAGE
+======================================= -->
+
+<div id="imageModal" class="modal">
+
+  <button
+    id="closeModal"
+    type="button"
+    class="close-btn"
+    aria-label="إغلاق">
+
+    &times;
+
+  </button>
+
+
+  <img
+    id="modalImage"
+    class="modal-img"
+    src=""
+    alt="صورة المنتج">
+
+</div>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+  /* =====================================
+     FILTER BUTTONS
+  ===================================== */
+
+  const filterButtons =
+    document.querySelectorAll(".filter-btn");
+
+  const menuCards =
+    document.querySelectorAll(".menu-card");
+
+
+  filterButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+      const category =
+        button.getAttribute("data-filter");
+
+
+      filterButtons.forEach(function(btn) {
+
+        btn.classList.remove("active");
+
       });
-    }
 
-    function openFullscreen(src) {
-      const modal = document.getElementById('imageModal');
-      const modalImg = document.getElementById('modalImage');
-      modal.style.display = 'flex';
-      modalImg.src = src;
-    }
 
-    function closeFullscreen() {
-      document.getElementById('imageModal').style.display = 'none';
+      button.classList.add("active");
+
+
+      menuCards.forEach(function(card) {
+
+        if (category === "all") {
+
+          card.classList.remove("hidden");
+
+        }
+
+        else if (
+          card.classList.contains(category)
+        ) {
+
+          card.classList.remove("hidden");
+
+        }
+
+        else {
+
+          card.classList.add("hidden");
+
+        }
+
+      });
+
+    });
+
+  });
+
+
+
+  /* =====================================
+     IMAGE FULLSCREEN
+  ===================================== */
+
+  const modal =
+    document.getElementById("imageModal");
+
+  const modalImage =
+    document.getElementById("modalImage");
+
+  const closeButton =
+    document.getElementById("closeModal");
+
+  const imageButtons =
+    document.querySelectorAll(".image-button");
+
+
+  imageButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+      const image =
+        button.getAttribute("data-image");
+
+      modalImage.src = image;
+
+      modal.classList.add("show");
+
+      document.body.style.overflow = "hidden";
+
+    });
+
+  });
+
+
+
+  /* =====================================
+     CLOSE IMAGE
+  ===================================== */
+
+  function closeImage() {
+
+    modal.classList.remove("show");
+
+    modalImage.src = "";
+
+    document.body.style.overflow = "";
+
+  }
+
+
+  closeButton.addEventListener(
+    "click",
+    closeImage
+  );
+
+
+  modal.addEventListener(
+    "click",
+    function(event) {
+
+      if (event.target === modal) {
+
+        closeImage();
+
+      }
+
     }
-  </script>
+  );
+
+
+
+  /* ESCAPE BUTTON */
+
+  document.addEventListener(
+    "keydown",
+    function(event) {
+
+      if (event.key === "Escape") {
+
+        closeImage();
+
+      }
+
+    }
+  );
+
+
+});
+
+</script>
+
 
 </body>
+
 </html>
