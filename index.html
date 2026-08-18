@@ -11,7 +11,6 @@
 
   <title>عتيق شاهي ومخبوزات</title>
 
-  <!-- Arabic Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -21,10 +20,6 @@
   >
 
   <style>
-
-    /* ========================================
-       GENERAL
-    ======================================== */
 
     * {
       box-sizing: border-box;
@@ -60,9 +55,7 @@
     }
 
 
-    /* ========================================
-       MAIN CONTAINER
-    ======================================== */
+    /* MAIN CONTAINER */
 
     .container {
       width: 100%;
@@ -71,9 +64,7 @@
     }
 
 
-    /* ========================================
-       HEADER
-    ======================================== */
+    /* HEADER */
 
     .header {
       text-align: center;
@@ -97,36 +88,27 @@
 
     .header h1 {
       margin: 0;
-
       color: #3a1806;
-
       font-size: 2rem;
       font-weight: 800;
     }
 
     .header p {
       margin: 6px 0 0;
-
       color: #71441e;
-
       font-size: 0.95rem;
       font-weight: 700;
     }
 
 
-    /* ========================================
-       STICKY NAVIGATION
-    ======================================== */
+    /* STICKY NAVIGATION */
 
     .sticky-controls {
       position: sticky;
-
       top: 0;
-
       z-index: 5000;
 
       padding: 8px 5px 11px;
-
       margin-bottom: 18px;
 
       background:
@@ -154,15 +136,11 @@
     }
 
 
-    /* ========================================
-       LANGUAGE BUTTON
-    ======================================== */
+    /* LANGUAGE */
 
     .language-container {
       display: flex;
       justify-content: center;
-
-      transition: all 0.25s ease;
     }
 
     .language-btn {
@@ -184,7 +162,6 @@
       color: #ffe7b5;
 
       font-family: 'Cairo', Arial, sans-serif;
-
       font-size: 0.95rem;
       font-weight: 800;
 
@@ -205,19 +182,13 @@
     }
 
 
-    /* ========================================
-       FILTER BUTTONS
-    ======================================== */
+    /* FILTER BUTTONS */
 
     .filter-container {
       display: flex;
-
       justify-content: center;
       flex-wrap: wrap;
-
       gap: 8px;
-
-      transition: all 0.25s ease;
     }
 
     .filter-btn {
@@ -233,20 +204,17 @@
       color: #351505;
 
       padding: 9px 17px;
-
       min-height: 46px;
 
       border-radius: 30px;
 
       font-family: 'Cairo', Arial, sans-serif;
-
       font-size: 0.92rem;
       font-weight: 800;
 
       white-space: nowrap;
 
       cursor: pointer;
-      touch-action: manipulation;
 
       box-shadow:
         0 5px 14px rgba(0, 0, 0, 0.45);
@@ -275,9 +243,7 @@
     }
 
 
-    /* ========================================
-       SMALL NAVIGATION WHEN SCROLLING
-    ======================================== */
+    /* COMPACT NAVIGATION */
 
     .sticky-controls.compact {
       padding-top: 5px;
@@ -287,7 +253,6 @@
     .sticky-controls.compact .sticky-inner {
       flex-direction: row;
       align-items: center;
-
       gap: 6px;
     }
 
@@ -313,7 +278,6 @@
       overflow-x: auto;
 
       gap: 5px;
-
       padding-bottom: 2px;
 
       scrollbar-width: none;
@@ -337,9 +301,7 @@
     }
 
 
-    /* ========================================
-       SECTION HEADINGS
-    ======================================== */
+    /* SECTION HEADINGS */
 
     .section-heading {
       margin: 12px 0 17px;
@@ -368,24 +330,19 @@
 
     .section-heading h2 {
       margin: 0;
-
       font-size: 1.25rem;
       font-weight: 800;
     }
 
     .section-heading p {
       margin: 3px 0 0;
-
       color: #dcb77b;
-
       font-size: 0.75rem;
       font-weight: 600;
     }
 
 
-    /* ========================================
-       MENU CARDS
-    ======================================== */
+    /* MENU CARDS */
 
     .menu-card {
       background:
@@ -411,15 +368,11 @@
     }
 
 
-    /* ========================================
-       IMAGE ZOOM EFFECT
-    ======================================== */
+    /* IMAGE EFFECT */
 
     .image-wrap {
       width: 100%;
-
       overflow: hidden;
-
       background: #1d0d05;
     }
 
@@ -428,19 +381,15 @@
       height: 300px;
 
       object-fit: cover;
-
       display: block;
 
       cursor: pointer;
-      touch-action: manipulation;
 
       transition:
         transform 0.35s ease,
         filter 0.35s ease,
         opacity 0.2s ease;
     }
-
-    /* Smooth zoom on computers */
 
     @media (hover: hover) and (pointer: fine) {
 
@@ -457,17 +406,13 @@
 
     }
 
-    /* Small touch animation */
-
     .menu-image:active {
       transform: scale(1.02);
       opacity: 0.92;
     }
 
 
-    /* ========================================
-       CARD CONTENT
-    ======================================== */
+    /* CARD CONTENT */
 
     .card-content {
       padding: 17px 20px 15px;
@@ -494,13 +439,10 @@
     }
 
 
-    /* ========================================
-       CALORIES
-    ======================================== */
+    /* CALORIES */
 
     .calories {
       margin-top: 12px;
-
       padding-top: 8px;
 
       border-top:
@@ -526,9 +468,7 @@
     }
 
 
-    /* ========================================
-       ENGLISH MODE
-    ======================================== */
+    /* ENGLISH MODE */
 
     html[dir="ltr"] body {
       font-family:
@@ -537,16 +477,8 @@
         sans-serif;
     }
 
-    html[dir="ltr"] .item-title,
-    html[dir="ltr"] .item-desc,
-    html[dir="ltr"] .header {
-      direction: ltr;
-    }
 
-
-    /* ========================================
-       FOOTER
-    ======================================== */
+    /* FOOTER */
 
     .footer {
       margin-top: 35px;
@@ -557,7 +489,6 @@
       text-align: center;
 
       border-radius: 18px;
-
       border: 1px solid #b67b39;
 
       background:
@@ -598,7 +529,6 @@
       border-radius: 5px;
 
       background: #aa702f;
-
       opacity: 0.7;
     }
 
@@ -612,18 +542,12 @@
     }
 
 
-    /* ========================================
-       HIDDEN
-    ======================================== */
-
     .hidden {
       display: none !important;
     }
 
 
-    /* ========================================
-       FULL SCREEN IMAGE VIEWER
-    ======================================== */
+    /* FULL SCREEN IMAGE */
 
     .modal {
       display: none;
@@ -638,8 +562,7 @@
       width: 100vw;
       height: 100vh;
 
-      background:
-        rgba(5, 3, 2, 0.97);
+      background: rgba(5, 3, 2, 0.97);
 
       align-items: center;
       justify-content: center;
@@ -667,8 +590,7 @@
       box-shadow:
         0 0 45px rgba(0, 0, 0, 0.95);
 
-      animation:
-        modalOpen 0.22s ease;
+      animation: modalOpen 0.22s ease;
     }
 
     @keyframes modalOpen {
@@ -699,33 +621,20 @@
       border: 2px solid #d29a4e;
       border-radius: 50%;
 
-      background:
-        rgba(48, 21, 7, 0.92);
+      background: rgba(48, 21, 7, 0.92);
 
       color: white;
 
       font-size: 38px;
-      line-height: 45px;
-
-      font-family:
-        Arial,
-        sans-serif;
 
       cursor: pointer;
-      touch-action: manipulation;
 
       box-shadow:
         0 4px 15px rgba(0, 0, 0, 0.7);
     }
 
-    .close-btn:active {
-      transform: scale(0.92);
-    }
 
-
-    /* ========================================
-       MOBILE
-    ======================================== */
+    /* MOBILE */
 
     @media (max-width: 480px) {
 
@@ -760,21 +669,6 @@
         height: 270px;
       }
 
-      .section-heading {
-        padding: 13px 12px;
-      }
-
-      .section-heading h2 {
-        font-size: 1.08rem;
-      }
-
-      .footer {
-        padding: 22px 15px;
-      }
-
-
-      /* Extra compact navigation on phones */
-
       .sticky-controls.compact .filter-btn {
         font-size: 0.68rem;
         padding: 6px 9px;
@@ -783,60 +677,6 @@
       .sticky-controls.compact .language-btn {
         font-size: 0.68rem;
         padding: 6px 9px;
-      }
-
-    }
-
-
-    /* ========================================
-       TABLET
-    ======================================== */
-
-    @media (min-width: 700px) {
-
-      body {
-        padding: 22px;
-      }
-
-      .container {
-        max-width: 720px;
-      }
-
-      .header {
-        padding: 28px 20px;
-      }
-
-      .header h1 {
-        font-size: 2.35rem;
-      }
-
-      .header p {
-        font-size: 1.05rem;
-      }
-
-      .menu-image {
-        height: 350px;
-      }
-
-      .item-title {
-        font-size: 1.65rem;
-      }
-
-      .item-desc {
-        font-size: 1.05rem;
-      }
-
-      .calories {
-        font-size: 0.82rem;
-      }
-
-      .filter-btn {
-        font-size: 1rem;
-        padding: 11px 21px;
-      }
-
-      .section-heading h2 {
-        font-size: 1.4rem;
       }
 
     }
@@ -852,9 +692,7 @@
 <div class="container">
 
 
-  <!-- =====================================
-       HEADER
-  ====================================== -->
+  <!-- HEADER -->
 
   <div class="header">
 
@@ -874,9 +712,7 @@
 
 
 
-  <!-- =====================================
-       STICKY LANGUAGE + CATEGORIES
-  ====================================== -->
+  <!-- STICKY CONTROLS -->
 
   <div
     class="sticky-controls"
@@ -884,9 +720,6 @@
   >
 
     <div class="sticky-inner">
-
-
-      <!-- LANGUAGE SWITCH -->
 
       <div class="language-container">
 
@@ -900,8 +733,6 @@
       </div>
 
 
-      <!-- CATEGORY BUTTONS -->
-
       <div class="filter-container">
 
         <button
@@ -911,6 +742,16 @@
           data-ar="الكل"
           data-en="All">
           الكل
+        </button>
+
+
+        <button
+          type="button"
+          class="filter-btn"
+          data-filter="pastries"
+          data-ar="الفطائر والمخبوزات"
+          data-en="Pastries">
+          الفطائر والمخبوزات
         </button>
 
 
@@ -933,16 +774,6 @@
           المشروبات الباردة
         </button>
 
-
-        <button
-          type="button"
-          class="filter-btn"
-          data-filter="pastries"
-          data-ar="الفطائر والمخبوزات"
-          data-en="Pastries">
-          الفطائر والمخبوزات
-        </button>
-
       </div>
 
     </div>
@@ -952,7 +783,299 @@
 
 
   <!-- =====================================
-       HOT DRINKS HEADING
+       1. PASTRIES
+  ====================================== -->
+
+  <div class="section-heading">
+
+    <h2
+      data-ar="🥐 الفطائر والمخبوزات"
+      data-en="🥐 Pastries & Bakes">
+      🥐 الفطائر والمخبوزات
+    </h2>
+
+    <p
+      data-ar="مخبوزات طازجة تقدم يومياً"
+      data-en="Freshly baked and served daily">
+      مخبوزات طازجة تقدم يومياً
+    </p>
+
+  </div>
+
+
+
+  <!-- عكاوي -->
+
+  <div class="menu-card pastries">
+
+    <div class="image-wrap">
+
+      <img
+        class="menu-image"
+        src="akaiw fatir.jpeg"
+        alt="فطيره عكاوي"
+        data-ar-alt="فطيره عكاوي"
+        data-en-alt="Akkawi cheese pastry"
+      >
+
+    </div>
+
+    <div class="card-content">
+
+      <h2
+        class="item-title"
+        data-ar="فطيره عكاوي"
+        data-en="Akkawi Cheese Pastry">
+        فطيره عكاوي
+      </h2>
+
+      <p
+        class="item-desc"
+        data-ar="فطيرة مخبوزة طازجة محشوة بجبنة العكاوي الغنية."
+        data-en="A freshly baked pastry filled with rich, creamy Akkawi cheese.">
+        فطيرة مخبوزة طازجة محشوة بجبنة العكاوي الغنية.
+      </p>
+
+      <div
+        class="calories"
+        data-ar="تقريباً 450 سعرة حرارية"
+        data-en="Approximately 450 calories">
+        تقريباً 450 سعرة حرارية
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- شيبس -->
+
+  <div class="menu-card pastries">
+
+    <div class="image-wrap">
+
+      <img
+        class="menu-image"
+        src="chips fatrai.jpeg"
+        alt="فطيره شيبس"
+        data-ar-alt="فطيره شيبس"
+        data-en-alt="Cheese and chips pastry"
+      >
+
+    </div>
+
+    <div class="card-content">
+
+      <h2
+        class="item-title"
+        data-ar="فطيره شيبس"
+        data-en="Cheese & Chips Pastry">
+        فطيره شيبس
+      </h2>
+
+      <p
+        class="item-desc"
+        data-ar="فطيرة ساخنة محشوة بالجبن ومغطاة بقطع الشيبس المقرمشة."
+        data-en="A warm cheese-filled pastry topped with crunchy potato chips.">
+        فطيرة ساخنة محشوة بالجبن ومغطاة بقطع الشيبس المقرمشة.
+      </p>
+
+      <div
+        class="calories"
+        data-ar="تقريباً 500 سعرة حرارية"
+        data-en="Approximately 500 calories">
+        تقريباً 500 سعرة حرارية
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ببروني -->
+
+  <div class="menu-card pastries">
+
+    <div class="image-wrap">
+
+      <img
+        class="menu-image"
+        src="peperion pizza.jpeg"
+        alt="فطيره بيتزا ببروني"
+        data-ar-alt="فطيره بيتزا ببروني"
+        data-en-alt="Pepperoni pizza pastry"
+      >
+
+    </div>
+
+    <div class="card-content">
+
+      <h2
+        class="item-title"
+        data-ar="فطيره بيتزا ببروني"
+        data-en="Pepperoni Pizza Pastry">
+        فطيره بيتزا ببروني
+      </h2>
+
+      <p
+        class="item-desc"
+        data-ar="فطيرة بيتزا بعجينة طازجة مع صوص الطماطم، الجبن، وشرائح الببروني."
+        data-en="Freshly baked pizza pastry topped with tomato sauce, melted cheese, and pepperoni.">
+        فطيرة بيتزا بعجينة طازجة مع صوص الطماطم، الجبن، وشرائح الببروني.
+      </p>
+
+      <div
+        class="calories"
+        data-ar="تقريباً 500 سعرة حرارية"
+        data-en="Approximately 500 calories">
+        تقريباً 500 سعرة حرارية
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- بيتزا -->
+
+  <div class="menu-card pastries">
+
+    <div class="image-wrap">
+
+      <img
+        class="menu-image"
+        src="pizza normal.jpeg"
+        alt="فطيره بيتزا"
+        data-ar-alt="فطيره بيتزا"
+        data-en-alt="Cheese pizza pastry"
+      >
+
+    </div>
+
+    <div class="card-content">
+
+      <h2
+        class="item-title"
+        data-ar="فطيره بيتزا"
+        data-en="Cheese Pizza Pastry">
+        فطيره بيتزا
+      </h2>
+
+      <p
+        class="item-desc"
+        data-ar="بيتزا كلاسيكية مخبوزة بصلصة الطماطم وجبنة الموزاريلا الذائبة."
+        data-en="A classic freshly baked pizza pastry with tomato sauce and melted mozzarella cheese.">
+        بيتزا كلاسيكية مخبوزة بصلصة الطماطم وجبنة الموزاريلا الذائبة.
+      </p>
+
+      <div
+        class="calories"
+        data-ar="تقريباً 450 سعرة حرارية"
+        data-en="Approximately 450 calories">
+        تقريباً 450 سعرة حرارية
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- بيتزا خضار -->
+
+  <div class="menu-card pastries">
+
+    <div class="image-wrap">
+
+      <img
+        class="menu-image"
+        src="pizza vegtable.jpeg"
+        alt="فطيره بيتزا خضار"
+        data-ar-alt="فطيره بيتزا خضار"
+        data-en-alt="Vegetable pizza pastry"
+      >
+
+    </div>
+
+    <div class="card-content">
+
+      <h2
+        class="item-title"
+        data-ar="فطيره بيتزا خضار"
+        data-en="Vegetable Pizza Pastry">
+        فطيره بيتزا خضار
+      </h2>
+
+      <p
+        class="item-desc"
+        data-ar="فطيرة بيتزا مشكلة بالخضار الطازجة، الزيتون، وجبنة الموزاريلا."
+        data-en="A freshly baked pizza pastry topped with vegetables, olives, and melted mozzarella cheese.">
+        فطيرة بيتزا مشكلة بالخضار الطازجة، الزيتون، وجبنة الموزاريلا.
+      </p>
+
+      <div
+        class="calories"
+        data-ar="تقريباً 400 سعرة حرارية"
+        data-en="Approximately 400 calories">
+        تقريباً 400 سعرة حرارية
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- سبانخ -->
+
+  <div class="menu-card pastries">
+
+    <div class="image-wrap">
+
+      <img
+        class="menu-image"
+        src="spiacnhe fatri.jpeg"
+        alt="فطيره سبانخ"
+        data-ar-alt="فطيره سبانخ"
+        data-en-alt="Spinach pastry"
+      >
+
+    </div>
+
+    <div class="card-content">
+
+      <h2
+        class="item-title"
+        data-ar="فطيره سبانخ"
+        data-en="Spinach Pastry">
+        فطيره سبانخ
+      </h2>
+
+      <p
+        class="item-desc"
+        data-ar="فطيرة سبانخ تقليدية محشوة بالسبانخ الطازجة والسماق."
+        data-en="A traditional savory pastry filled with spinach and seasoned with sumac.">
+        فطيرة سبانخ تقليدية محشوة بالسبانخ الطازجة والسماق.
+      </p>
+
+      <div
+        class="calories"
+        data-ar="تقريباً 300 سعرة حرارية"
+        data-en="Approximately 300 calories">
+        تقريباً 300 سعرة حرارية
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================
+       2. HOT DRINKS
   ====================================== -->
 
   <div class="section-heading">
@@ -1011,7 +1134,7 @@
 
 
 
-  <!-- شاي اخضر / طائفي -->
+  <!-- شاي -->
 
   <div class="menu-card hot-drinks">
 
@@ -1050,7 +1173,7 @@
 
 
   <!-- =====================================
-       COLD DRINKS HEADING
+       3. COLD DRINKS
   ====================================== -->
 
   <div class="section-heading">
@@ -1147,301 +1270,7 @@
 
 
 
-  <!-- =====================================
-       PASTRIES HEADING
-  ====================================== -->
-
-  <div class="section-heading">
-
-    <h2
-      data-ar="🥐 الفطائر والمخبوزات"
-      data-en="🥐 Pastries & Bakes">
-      🥐 الفطائر والمخبوزات
-    </h2>
-
-    <p
-      data-ar="مخبوزات طازجة تقدم يومياً"
-      data-en="Freshly baked and served daily">
-      مخبوزات طازجة تقدم يومياً
-    </p>
-
-  </div>
-
-
-
-  <!-- عكاوي -->
-
-  <div class="menu-card pastries">
-
-    <div class="image-wrap">
-
-      <img
-        class="menu-image"
-        src="akaiw fatir.jpeg"
-        alt="فطيره عكاوي"
-        data-ar-alt="فطيره عكاوي"
-        data-en-alt="Akkawi cheese pastry"
-      >
-
-    </div>
-
-    <div class="card-content">
-
-      <h2
-        class="item-title"
-        data-ar="فطيره عكاوي"
-        data-en="Akkawi Cheese Pastry">
-        فطيره عكاوي
-      </h2>
-
-      <p
-        class="item-desc"
-        data-ar="فطيرة مخبوزة طازجة محشوة بجبنة العكاوي الغنية."
-        data-en="A freshly baked pastry filled with rich, creamy Akkawi cheese.">
-        فطيرة مخبوزة طازجة محشوة بجبنة العكاوي الغنية.
-      </p>
-
-      <div
-        class="calories"
-        data-ar="تقريباً 450 سعرة حرارية لكل قطعة"
-        data-en="Approximately 450 calories per piece">
-        تقريباً 450 سعرة حرارية لكل قطعة
-      </div>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- شيبس -->
-
-  <div class="menu-card pastries">
-
-    <div class="image-wrap">
-
-      <img
-        class="menu-image"
-        src="chips fatrai.jpeg"
-        alt="فطيره شيبس"
-        data-ar-alt="فطيره شيبس"
-        data-en-alt="Cheese and chips pastry"
-      >
-
-    </div>
-
-    <div class="card-content">
-
-      <h2
-        class="item-title"
-        data-ar="فطيره شيبس"
-        data-en="Cheese & Chips Pastry">
-        فطيره شيبس
-      </h2>
-
-      <p
-        class="item-desc"
-        data-ar="فطيرة ساخنة محشوة بالجبن ومغطاة بقطع الشيبس المقرمشة."
-        data-en="A warm cheese-filled pastry topped with crunchy potato chips.">
-        فطيرة ساخنة محشوة بالجبن ومغطاة بقطع الشيبس المقرمشة.
-      </p>
-
-      <div
-        class="calories"
-        data-ar="تقريباً 500 سعرة حرارية لكل قطعة"
-        data-en="Approximately 500 calories per piece">
-        تقريباً 500 سعرة حرارية لكل قطعة
-      </div>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- ببروني -->
-
-  <div class="menu-card pastries">
-
-    <div class="image-wrap">
-
-      <img
-        class="menu-image"
-        src="peperion pizza.jpeg"
-        alt="فطيره بيتزا ببروني"
-        data-ar-alt="فطيره بيتزا ببروني"
-        data-en-alt="Pepperoni pizza pastry"
-      >
-
-    </div>
-
-    <div class="card-content">
-
-      <h2
-        class="item-title"
-        data-ar="فطيره بيتزا ببروني"
-        data-en="Pepperoni Pizza Pastry">
-        فطيره بيتزا ببروني
-      </h2>
-
-      <p
-        class="item-desc"
-        data-ar="فطيرة بيتزا بعجينة طازجة مع صوص الطماطم، الجبن، وشرائح الببروني."
-        data-en="Freshly baked pizza pastry topped with tomato sauce, melted cheese, and pepperoni.">
-        فطيرة بيتزا بعجينة طازجة مع صوص الطماطم، الجبن، وشرائح الببروني.
-      </p>
-
-      <div
-        class="calories"
-        data-ar="تقريباً 500 سعرة حرارية لكل قطعة"
-        data-en="Approximately 500 calories per piece">
-        تقريباً 500 سعرة حرارية لكل قطعة
-      </div>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- بيتزا -->
-
-  <div class="menu-card pastries">
-
-    <div class="image-wrap">
-
-      <img
-        class="menu-image"
-        src="pizza normal.jpeg"
-        alt="فطيره بيتزا"
-        data-ar-alt="فطيره بيتزا"
-        data-en-alt="Cheese pizza pastry"
-      >
-
-    </div>
-
-    <div class="card-content">
-
-      <h2
-        class="item-title"
-        data-ar="فطيره بيتزا"
-        data-en="Cheese Pizza Pastry">
-        فطيره بيتزا
-      </h2>
-
-      <p
-        class="item-desc"
-        data-ar="بيتزا كلاسيكية مخبوزة بصلصة الطماطم وجبنة الموزاريلا الذائبة."
-        data-en="A classic freshly baked pizza pastry with tomato sauce and melted mozzarella cheese.">
-        بيتزا كلاسيكية مخبوزة بصلصة الطماطم وجبنة الموزاريلا الذائبة.
-      </p>
-
-      <div
-        class="calories"
-        data-ar="تقريباً 450 سعرة حرارية لكل قطعة"
-        data-en="Approximately 450 calories per piece">
-        تقريباً 450 سعرة حرارية لكل قطعة
-      </div>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- بيتزا خضار -->
-
-  <div class="menu-card pastries">
-
-    <div class="image-wrap">
-
-      <img
-        class="menu-image"
-        src="pizza vegtable.jpeg"
-        alt="فطيره بيتزا خضار"
-        data-ar-alt="فطيره بيتزا خضار"
-        data-en-alt="Vegetable pizza pastry"
-      >
-
-    </div>
-
-    <div class="card-content">
-
-      <h2
-        class="item-title"
-        data-ar="فطيره بيتزا خضار"
-        data-en="Vegetable Pizza Pastry">
-        فطيره بيتزا خضار
-      </h2>
-
-      <p
-        class="item-desc"
-        data-ar="فطيرة بيتزا مشكلة بالخضار الطازجة، الزيتون، وجبنة الموزاريلا."
-        data-en="A freshly baked pizza pastry topped with vegetables, olives, and melted mozzarella cheese.">
-        فطيرة بيتزا مشكلة بالخضار الطازجة، الزيتون، وجبنة الموزاريلا.
-      </p>
-
-      <div
-        class="calories"
-        data-ar="تقريباً 400 سعرة حرارية لكل قطعة"
-        data-en="Approximately 400 calories per piece">
-        تقريباً 400 سعرة حرارية لكل قطعة
-      </div>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- سبانخ -->
-
-  <div class="menu-card pastries">
-
-    <div class="image-wrap">
-
-      <img
-        class="menu-image"
-        src="spiacnhe fatri.jpeg"
-        alt="فطيره سبانخ"
-        data-ar-alt="فطيره سبانخ"
-        data-en-alt="Spinach pastry"
-      >
-
-    </div>
-
-    <div class="card-content">
-
-      <h2
-        class="item-title"
-        data-ar="فطيره سبانخ"
-        data-en="Spinach Pastry">
-        فطيره سبانخ
-      </h2>
-
-      <p
-        class="item-desc"
-        data-ar="فطيرة سبانخ تقليدية محشوة بالسبانخ الطازجة والسماق."
-        data-en="A traditional savory pastry filled with spinach and seasoned with sumac.">
-        فطيرة سبانخ تقليدية محشوة بالسبانخ الطازجة والسماق.
-      </p>
-
-      <div
-        class="calories"
-        data-ar="تقريباً 300 سعرة حرارية لكل قطعة"
-        data-en="Approximately 300 calories per piece">
-        تقريباً 300 سعرة حرارية لكل قطعة
-      </div>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- =====================================
-       FOOTER
-  ====================================== -->
+  <!-- FOOTER -->
 
   <footer class="footer">
 
@@ -1475,9 +1304,7 @@
 
 
 
-<!-- =====================================
-     FULLSCREEN IMAGE
-====================================== -->
+<!-- IMAGE MODAL -->
 
 <div
   id="imageModal"
@@ -1509,9 +1336,7 @@ document.addEventListener(
   function () {
 
 
-    /* =====================================
-       LANGUAGE SWITCH
-    ====================================== */
+    /* LANGUAGE */
 
     var currentLanguage = "ar";
 
@@ -1531,15 +1356,8 @@ document.addEventListener(
 
       if (language === "en") {
 
-        html.setAttribute(
-          "lang",
-          "en"
-        );
-
-        html.setAttribute(
-          "dir",
-          "ltr"
-        );
+        html.setAttribute("lang", "en");
+        html.setAttribute("dir", "ltr");
 
         document.title =
           "Ateeq Tea & Pastries";
@@ -1551,15 +1369,8 @@ document.addEventListener(
 
       else {
 
-        html.setAttribute(
-          "lang",
-          "ar"
-        );
-
-        html.setAttribute(
-          "dir",
-          "rtl"
-        );
+        html.setAttribute("lang", "ar");
+        html.setAttribute("dir", "rtl");
 
         document.title =
           "عتيق شاهي ومخبوزات";
@@ -1569,8 +1380,6 @@ document.addEventListener(
 
       }
 
-
-      /* TRANSLATE ALL TEXT */
 
       var translatedElements =
         document.querySelectorAll(
@@ -1584,30 +1393,15 @@ document.addEventListener(
         i++
       ) {
 
-        if (language === "en") {
-
-          translatedElements[i].textContent =
-            translatedElements[i]
-              .getAttribute(
-                "data-en"
-              );
-
-        }
-
-        else {
-
-          translatedElements[i].textContent =
-            translatedElements[i]
-              .getAttribute(
-                "data-ar"
-              );
-
-        }
+        translatedElements[i].textContent =
+          translatedElements[i].getAttribute(
+            language === "en"
+              ? "data-en"
+              : "data-ar"
+          );
 
       }
 
-
-      /* TRANSLATE IMAGE ALT TEXT */
 
       var translatedImages =
         document.querySelectorAll(
@@ -1621,62 +1415,34 @@ document.addEventListener(
         a++
       ) {
 
-        if (language === "en") {
-
-          translatedImages[a].alt =
-            translatedImages[a]
-              .getAttribute(
-                "data-en-alt"
-              );
-
-        }
-
-        else {
-
-          translatedImages[a].alt =
-            translatedImages[a]
-              .getAttribute(
-                "data-ar-alt"
-              );
-
-        }
+        translatedImages[a].alt =
+          translatedImages[a].getAttribute(
+            language === "en"
+              ? "data-en-alt"
+              : "data-ar-alt"
+          );
 
       }
 
     }
 
 
-
     languageButton.addEventListener(
       "click",
       function () {
 
-        if (
+        changeLanguage(
           currentLanguage === "ar"
-        ) {
-
-          changeLanguage(
-            "en"
-          );
-
-        }
-
-        else {
-
-          changeLanguage(
-            "ar"
-          );
-
-        }
+            ? "en"
+            : "ar"
+        );
 
       }
     );
 
 
 
-    /* =====================================
-       FILTER MENU
-    ====================================== */
+    /* FILTER MENU */
 
     var filterButtons =
       document.querySelectorAll(
@@ -1706,9 +1472,7 @@ document.addEventListener(
 
           sectionHeadings[s]
             .classList
-            .remove(
-              "hidden"
-            );
+            .remove("hidden");
 
         }
 
@@ -1716,16 +1480,13 @@ document.addEventListener(
 
           sectionHeadings[s]
             .classList
-            .add(
-              "hidden"
-            );
+            .add("hidden");
 
         }
 
       }
 
     }
-
 
 
     for (
@@ -1744,8 +1505,6 @@ document.addEventListener(
             );
 
 
-          /* ACTIVE BUTTON */
-
           for (
             var x = 0;
             x < filterButtons.length;
@@ -1754,39 +1513,18 @@ document.addEventListener(
 
             filterButtons[x]
               .classList
-              .remove(
-                "active"
-              );
+              .remove("active");
 
           }
 
-          this.classList.add(
-            "active"
+
+          this.classList.add("active");
+
+
+          showSectionHeadings(
+            category === "all"
           );
 
-
-          /* SHOW HEADINGS ONLY IN ALL */
-
-          if (
-            category === "all"
-          ) {
-
-            showSectionHeadings(
-              true
-            );
-
-          }
-
-          else {
-
-            showSectionHeadings(
-              false
-            );
-
-          }
-
-
-          /* FILTER CARDS */
 
           for (
             var c = 0;
@@ -1795,32 +1533,15 @@ document.addEventListener(
           ) {
 
             if (
-              category === "all"
+              category === "all" ||
+              menuCards[c]
+                .classList
+                .contains(category)
             ) {
 
               menuCards[c]
                 .classList
-                .remove(
-                  "hidden"
-                );
-
-            }
-
-            else if (
-
-              menuCards[c]
-                .classList
-                .contains(
-                  category
-                )
-
-            ) {
-
-              menuCards[c]
-                .classList
-                .remove(
-                  "hidden"
-                );
+                .remove("hidden");
 
             }
 
@@ -1828,9 +1549,7 @@ document.addEventListener(
 
               menuCards[c]
                 .classList
-                .add(
-                  "hidden"
-                );
+                .add("hidden");
 
             }
 
@@ -1843,9 +1562,7 @@ document.addEventListener(
 
 
 
-    /* =====================================
-       MAKE NAVIGATION SMALL WHEN SCROLLING
-    ====================================== */
+    /* COMPACT NAV */
 
     var stickyControls =
       document.getElementById(
@@ -1855,15 +1572,11 @@ document.addEventListener(
 
     function updateStickyControls() {
 
-      if (
-        window.scrollY > 130
-      ) {
+      if (window.scrollY > 130) {
 
         stickyControls
           .classList
-          .add(
-            "compact"
-          );
+          .add("compact");
 
       }
 
@@ -1871,9 +1584,7 @@ document.addEventListener(
 
         stickyControls
           .classList
-          .remove(
-            "compact"
-          );
+          .remove("compact");
 
       }
 
@@ -1889,13 +1600,8 @@ document.addEventListener(
     );
 
 
-    updateStickyControls();
 
-
-
-    /* =====================================
-       FULLSCREEN IMAGE VIEWER
-    ====================================== */
+    /* IMAGE VIEWER */
 
     var images =
       document.querySelectorAll(
@@ -1953,8 +1659,7 @@ document.addEventListener(
         "show"
       );
 
-      modalImage.src =
-        "";
+      modalImage.src = "";
 
       document.body.style.overflow =
         "";
@@ -1967,7 +1672,6 @@ document.addEventListener(
       function (event) {
 
         event.stopPropagation();
-
         closeImage();
 
       }
@@ -2005,8 +1709,7 @@ document.addEventListener(
       function (event) {
 
         if (
-          event.key === "Escape" ||
-          event.keyCode === 27
+          event.key === "Escape"
         ) {
 
           closeImage();
@@ -2015,6 +1718,7 @@ document.addEventListener(
 
       }
     );
+
 
   }
 );
