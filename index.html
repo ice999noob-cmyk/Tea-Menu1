@@ -29,38 +29,32 @@
     }
 
     html {
-      scroll-behavior: smooth;
+      min-height: 100%;
     }
 
     body {
       margin: 0;
       padding: 18px;
 
+      min-height: 100vh;
+
       font-family: 'Cairo', Arial, sans-serif;
 
-      color: #2d1a10;
+      color: #2d180c;
 
-      /*
-        DARK WOOD BACKGROUND
+      background-color: #160c06;
 
-        Upload the wood image to GitHub
-        and name it:
-
-        wood-bg.png
-      */
-
-      background-color: #160d08;
       background-image:
         linear-gradient(
-          rgba(15, 7, 4, 0.25),
-          rgba(15, 7, 4, 0.25)
+          rgba(20, 8, 3, 0.10),
+          rgba(20, 8, 3, 0.10)
         ),
-        url("wood-bg.png");
+        url("wood-bg.jpg");
 
-      background-repeat: repeat;
-      background-size: 300px 300px;
-
-      min-height: 100vh;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
     }
 
 
@@ -80,46 +74,45 @@
     ======================================== */
 
     .header {
-
       text-align: center;
+
+      padding: 24px 15px;
+
+      margin-bottom: 20px;
 
       background:
         linear-gradient(
           145deg,
-          #f5ead7,
-          #e7d1ac
+          #f7e9ce,
+          #e7c995
         );
 
-      border: 2px solid #8a5a2b;
+      border: 2px solid #a86b27;
 
       border-radius: 18px;
 
-      padding: 22px 15px;
-
-      margin-bottom: 20px;
-
       box-shadow:
-        0 8px 25px rgba(0,0,0,0.55);
+        0 8px 25px rgba(0, 0, 0, 0.55);
     }
 
-    .header h1 {
 
+    .header h1 {
       margin: 0;
 
-      font-size: 2rem;
+      color: #3a1806;
 
-      color: #32190d;
+      font-size: 2rem;
 
       font-weight: 800;
     }
 
+
     .header p {
+      margin: 6px 0 0;
 
-      margin: 5px 0 0;
+      color: #71441e;
 
-      color: #6b4426;
-
-      font-size: 1rem;
+      font-size: 0.95rem;
 
       font-weight: 700;
     }
@@ -130,7 +123,6 @@
     ======================================== */
 
     .filter-container {
-
       display: flex;
 
       justify-content: center;
@@ -144,26 +136,22 @@
 
 
     .filter-btn {
-
-      appearance: none;
-      -webkit-appearance: none;
-
-      border: 2px solid #b58a50;
+      border: 2px solid #c28a42;
 
       background:
         linear-gradient(
           145deg,
-          #f7ecd9,
-          #ddc298
+          #f8e9cb,
+          #dfbd83
         );
 
-      color: #32190d;
+      color: #351505;
+
+      padding: 11px 22px;
+
+      min-height: 50px;
 
       border-radius: 30px;
-
-      padding: 11px 20px;
-
-      min-height: 48px;
 
       font-family: 'Cairo', Arial, sans-serif;
 
@@ -176,33 +164,28 @@
       touch-action: manipulation;
 
       box-shadow:
-        0 5px 12px rgba(0,0,0,0.35);
+        0 5px 14px rgba(0, 0, 0, 0.45);
 
-      transition:
-        transform 0.15s ease,
-        background 0.15s ease,
-        color 0.15s ease;
+      transition: transform 0.15s ease;
     }
 
 
     .filter-btn:active {
-
-      transform: scale(0.96);
+      transform: scale(0.95);
     }
 
 
     .filter-btn.active {
-
       background:
         linear-gradient(
           145deg,
-          #5b3218,
-          #2e160b
+          #623413,
+          #321607
         );
 
-      color: #f8e5bd;
+      color: #ffe7b5;
 
-      border-color: #d1a35c;
+      border-color: #d99b46;
     }
 
 
@@ -211,44 +194,34 @@
     ======================================== */
 
     .menu-card {
-
       background:
         linear-gradient(
           160deg,
-          #f8efdf,
-          #e8d2ad
+          #f9ebcf,
+          #e7c994
         );
+
+      border: 1px solid #b47732;
 
       border-radius: 18px;
 
       overflow: hidden;
 
-      border: 1px solid #aa7b43;
-
       margin-bottom: 22px;
 
       box-shadow:
-        0 10px 25px rgba(0,0,0,0.55);
-
-      transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
+        0 10px 28px rgba(0, 0, 0, 0.60);
     }
 
 
-    .image-button {
-
-      display: block;
-
+    .menu-image {
       width: 100%;
 
-      padding: 0;
+      height: 300px;
 
-      margin: 0;
+      object-fit: cover;
 
-      border: 0;
-
-      background: none;
+      display: block;
 
       cursor: pointer;
 
@@ -256,201 +229,183 @@
     }
 
 
-    .menu-card img {
-
-      width: 100%;
-
-      height: 270px;
-
-      object-fit: cover;
-
-      display: block;
-
-      pointer-events: none;
-    }
-
-
-    .image-button:active {
-
-      opacity: 0.9;
+    .menu-image:active {
+      opacity: 0.90;
     }
 
 
     .card-content {
-
       padding: 17px 20px 20px;
     }
 
 
     .item-title {
-
       margin: 0 0 6px;
+
+      color: #381705;
 
       font-size: 1.45rem;
 
       font-weight: 800;
-
-      color: #351a0c;
     }
 
 
     .item-desc {
-
       margin: 0;
+
+      color: #694322;
 
       font-size: 0.95rem;
 
       line-height: 1.7;
 
       font-weight: 600;
-
-      color: #65472f;
     }
 
 
-    /* Hidden category */
-
     .hidden {
-
       display: none !important;
     }
 
 
     /* ========================================
-       FULLSCREEN IMAGE VIEWER
+       FULL SCREEN IMAGE VIEWER
     ======================================== */
 
     .modal {
-
       display: none;
 
       position: fixed;
 
-      z-index: 99999;
+      z-index: 999999;
 
       top: 0;
-
       left: 0;
 
-      right: 0;
+      width: 100vw;
+      height: 100vh;
 
-      bottom: 0;
-
-      width: 100%;
-
-      height: 100%;
-
-      background: rgba(10, 5, 2, 0.96);
-
-      justify-content: center;
+      background: rgba(5, 3, 2, 0.97);
 
       align-items: center;
+      justify-content: center;
 
-      padding: 20px;
+      padding: 10px;
     }
 
 
     .modal.show {
-
       display: flex;
     }
 
 
     .modal-img {
-
       display: block;
 
-      max-width: 96vw;
+      width: auto;
+      height: auto;
 
-      max-height: 90vh;
+      max-width: 98vw;
+      max-height: 95vh;
 
       object-fit: contain;
 
-      border-radius: 14px;
-
-      border: 2px solid #b88a4a;
+      border-radius: 8px;
 
       box-shadow:
-        0 0 35px rgba(0,0,0,0.9);
+        0 0 45px rgba(0, 0, 0, 0.95);
     }
 
 
     .close-btn {
-
       position: fixed;
 
-      top: 15px;
+      top: 16px;
+      right: 18px;
 
-      right: 20px;
+      width: 56px;
+      height: 56px;
 
-      width: 52px;
+      z-index: 1000000;
 
-      height: 52px;
+      border: 2px solid #d29a4e;
 
       border-radius: 50%;
 
-      border: 2px solid #d5ad72;
-
-      background: #3b1e0f;
+      background: rgba(48, 21, 7, 0.92);
 
       color: white;
 
-      font-size: 34px;
+      font-size: 38px;
 
-      font-weight: bold;
+      line-height: 45px;
 
-      line-height: 42px;
+      font-family: Arial, sans-serif;
 
       cursor: pointer;
 
-      z-index: 100000;
-
       touch-action: manipulation;
+
+      box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.7);
     }
 
 
     .close-btn:active {
-
-      transform: scale(0.94);
+      transform: scale(0.92);
     }
 
 
     /* ========================================
-       TABLET
+       TABLET / LARGE SCREEN
     ======================================== */
 
     @media (min-width: 700px) {
 
-      .container {
+      body {
+        padding: 22px;
+      }
 
+
+      .container {
         max-width: 720px;
       }
 
-      .menu-card img {
 
+      .header {
+        padding: 28px 20px;
+      }
+
+
+      .header h1 {
+        font-size: 2.35rem;
+      }
+
+
+      .header p {
+        font-size: 1.05rem;
+      }
+
+
+      .menu-image {
         height: 350px;
       }
 
-      .header h1 {
-
-        font-size: 2.3rem;
-      }
 
       .item-title {
-
-        font-size: 1.6rem;
+        font-size: 1.65rem;
       }
+
 
       .item-desc {
-
         font-size: 1.05rem;
       }
 
-      .filter-btn {
 
+      .filter-btn {
         font-size: 1.05rem;
 
-        padding: 12px 24px;
+        padding: 12px 26px;
       }
     }
 
@@ -466,13 +421,13 @@
 <div class="container">
 
 
-  <!-- ======================================
-       HEADER
-  ======================================= -->
+  <!-- HEADER -->
 
   <div class="header">
 
-    <h1>عتيق شاهي ومخبوزات</h1>
+    <h1>
+      عتيق شاهي ومخبوزات
+    </h1>
 
     <p>
       مخبوزات طازجة ومشروبات دافئة يومياً
@@ -482,9 +437,7 @@
 
 
 
-  <!-- ======================================
-       CATEGORY BUTTONS
-  ======================================= -->
+  <!-- CATEGORY BUTTONS -->
 
   <div class="filter-container">
 
@@ -492,9 +445,7 @@
       type="button"
       class="filter-btn active"
       data-filter="all">
-
       الكل
-
     </button>
 
 
@@ -502,9 +453,7 @@
       type="button"
       class="filter-btn"
       data-filter="drinks">
-
       المشروبات
-
     </button>
 
 
@@ -512,35 +461,26 @@
       type="button"
       class="filter-btn"
       data-filter="pastries">
-
       الفطائر والمخبوزات
-
     </button>
 
   </div>
 
 
 
-  <!-- ======================================
+  <!-- =====================================
        PASTRIES
-  ======================================= -->
+  ====================================== -->
 
 
   <!-- عكاوي -->
 
   <div class="menu-card pastries">
 
-    <button
-      type="button"
-      class="image-button"
-      data-image="akaiw fatir.jpeg">
-
-      <img
-        src="akaiw fatir.jpeg"
-        alt="فطيره عكاوي">
-
-    </button>
-
+    <img
+      class="menu-image"
+      src="akaiw fatir.jpeg"
+      alt="فطيره عكاوي">
 
     <div class="card-content">
 
@@ -562,17 +502,10 @@
 
   <div class="menu-card pastries">
 
-    <button
-      type="button"
-      class="image-button"
-      data-image="chips fatrai.jpeg">
-
-      <img
-        src="chips fatrai.jpeg"
-        alt="فطيره شيبس">
-
-    </button>
-
+    <img
+      class="menu-image"
+      src="chips fatrai.jpeg"
+      alt="فطيره شيبس">
 
     <div class="card-content">
 
@@ -594,17 +527,10 @@
 
   <div class="menu-card pastries">
 
-    <button
-      type="button"
-      class="image-button"
-      data-image="peperion pizza.jpeg">
-
-      <img
-        src="peperion pizza.jpeg"
-        alt="فطيره بيتزا ببروني">
-
-    </button>
-
+    <img
+      class="menu-image"
+      src="peperion pizza.jpeg"
+      alt="فطيره بيتزا ببروني">
 
     <div class="card-content">
 
@@ -626,17 +552,10 @@
 
   <div class="menu-card pastries">
 
-    <button
-      type="button"
-      class="image-button"
-      data-image="pizza normal.jpeg">
-
-      <img
-        src="pizza normal.jpeg"
-        alt="فطيره بيتزا">
-
-    </button>
-
+    <img
+      class="menu-image"
+      src="pizza normal.jpeg"
+      alt="فطيره بيتزا">
 
     <div class="card-content">
 
@@ -658,17 +577,10 @@
 
   <div class="menu-card pastries">
 
-    <button
-      type="button"
-      class="image-button"
-      data-image="pizza vegtable.jpeg">
-
-      <img
-        src="pizza vegtable.jpeg"
-        alt="فطيره بيتزا خضار">
-
-    </button>
-
+    <img
+      class="menu-image"
+      src="pizza vegtable.jpeg"
+      alt="فطيره بيتزا خضار">
 
     <div class="card-content">
 
@@ -690,17 +602,10 @@
 
   <div class="menu-card pastries">
 
-    <button
-      type="button"
-      class="image-button"
-      data-image="spiacnhe fatri.jpeg">
-
-      <img
-        src="spiacnhe fatri.jpeg"
-        alt="فطيره سبانخ">
-
-    </button>
-
+    <img
+      class="menu-image"
+      src="spiacnhe fatri.jpeg"
+      alt="فطيره سبانخ">
 
     <div class="card-content">
 
@@ -718,27 +623,19 @@
 
 
 
-
-  <!-- ======================================
+  <!-- =====================================
        DRINKS
-  ======================================= -->
+  ====================================== -->
 
 
   <!-- قهوة -->
 
   <div class="menu-card drinks">
 
-    <button
-      type="button"
-      class="image-button"
-      data-image="coffe dala.jpeg">
-
-      <img
-        src="coffe dala.jpeg"
-        alt="دله قهوه">
-
-    </button>
-
+    <img
+      class="menu-image"
+      src="coffe dala.jpeg"
+      alt="دله قهوه">
 
     <div class="card-content">
 
@@ -760,17 +657,10 @@
 
   <div class="menu-card drinks">
 
-    <button
-      type="button"
-      class="image-button"
-      data-image="kakate.jpeg">
-
-      <img
-        src="kakate.jpeg"
-        alt="كركديه">
-
-    </button>
-
+    <img
+      class="menu-image"
+      src="kakate.jpeg"
+      alt="كركديه">
 
     <div class="card-content">
 
@@ -792,17 +682,10 @@
 
   <div class="menu-card drinks">
 
-    <button
-      type="button"
-      class="image-button"
-      data-image="ice tea peach.jpeg">
-
-      <img
-        src="ice tea peach.jpeg"
-        alt="ايستي خوخ">
-
-    </button>
-
+    <img
+      class="menu-image"
+      src="ice tea peach.jpeg"
+      alt="ايستي خوخ">
 
     <div class="card-content">
 
@@ -823,22 +706,18 @@
 
 
 
-<!-- ======================================
+<!-- =====================================
      FULLSCREEN IMAGE
-======================================= -->
+====================================== -->
 
 <div id="imageModal" class="modal">
 
   <button
     id="closeModal"
     type="button"
-    class="close-btn"
-    aria-label="إغلاق">
-
+    class="close-btn">
     &times;
-
   </button>
-
 
   <img
     id="modalImage"
@@ -852,157 +731,224 @@
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
+  /*
+    Written this way intentionally so it also works
+    with older tablet browsers.
+  */
 
 
-  /* =====================================
-     FILTER BUTTONS
-  ===================================== */
-
-  const filterButtons =
-    document.querySelectorAll(".filter-btn");
-
-  const menuCards =
-    document.querySelectorAll(".menu-card");
+  document.addEventListener("DOMContentLoaded", function () {
 
 
-  filterButtons.forEach(function(button) {
+    /* ==========================
+       FILTER MENU
+    ========================== */
 
-    button.addEventListener("click", function() {
+    var filterButtons =
+      document.querySelectorAll(".filter-btn");
 
-      const category =
-        button.getAttribute("data-filter");
-
-
-      filterButtons.forEach(function(btn) {
-
-        btn.classList.remove("active");
-
-      });
+    var menuCards =
+      document.querySelectorAll(".menu-card");
 
 
-      button.classList.add("active");
+    for (var i = 0; i < filterButtons.length; i++) {
+
+      filterButtons[i].addEventListener(
+        "click",
+        function () {
+
+          var category =
+            this.getAttribute("data-filter");
 
 
-      menuCards.forEach(function(card) {
+          /* Remove active button */
 
-        if (category === "all") {
+          for (
+            var b = 0;
+            b < filterButtons.length;
+            b++
+          ) {
 
-          card.classList.remove("hidden");
+            filterButtons[b].classList.remove(
+              "active"
+            );
+
+          }
+
+
+          /* Activate selected button */
+
+          this.classList.add("active");
+
+
+          /* Show correct items */
+
+          for (
+            var c = 0;
+            c < menuCards.length;
+            c++
+          ) {
+
+            if (category === "all") {
+
+              menuCards[c].classList.remove(
+                "hidden"
+              );
+
+            }
+
+            else if (
+              menuCards[c].classList.contains(
+                category
+              )
+            ) {
+
+              menuCards[c].classList.remove(
+                "hidden"
+              );
+
+            }
+
+            else {
+
+              menuCards[c].classList.add(
+                "hidden"
+              );
+
+            }
+
+          }
+
+        }
+      );
+
+    }
+
+
+
+    /* ==========================
+       FULLSCREEN IMAGES
+    ========================== */
+
+    var images =
+      document.querySelectorAll(".menu-image");
+
+    var modal =
+      document.getElementById("imageModal");
+
+    var modalImage =
+      document.getElementById("modalImage");
+
+    var closeButton =
+      document.getElementById("closeModal");
+
+
+    for (var j = 0; j < images.length; j++) {
+
+      images[j].addEventListener(
+        "click",
+        function () {
+
+          /*
+            Loads the ORIGINAL image file.
+            It is not using the smaller card size.
+          */
+
+          modalImage.src = this.src;
+
+          modal.classList.add("show");
+
+          document.body.style.overflow =
+            "hidden";
+
+        }
+      );
+
+    }
+
+
+
+    /* ==========================
+       CLOSE FULLSCREEN
+    ========================== */
+
+    function closeImage() {
+
+      modal.classList.remove("show");
+
+      modalImage.src = "";
+
+      document.body.style.overflow = "";
+
+    }
+
+
+    closeButton.addEventListener(
+      "click",
+      function (event) {
+
+        event.stopPropagation();
+
+        closeImage();
+
+      }
+    );
+
+
+    /*
+      Tap the dark area to close
+    */
+
+    modal.addEventListener(
+      "click",
+      function (event) {
+
+        if (event.target === modal) {
+
+          closeImage();
 
         }
 
-        else if (
-          card.classList.contains(category)
+      }
+    );
+
+
+    /*
+      Don't close when tapping image
+    */
+
+    modalImage.addEventListener(
+      "click",
+      function (event) {
+
+        event.stopPropagation();
+
+      }
+    );
+
+
+    /*
+      ESC key on computer
+    */
+
+    document.addEventListener(
+      "keydown",
+      function (event) {
+
+        if (
+          event.key === "Escape" ||
+          event.keyCode === 27
         ) {
 
-          card.classList.remove("hidden");
+          closeImage();
 
         }
 
-        else {
+      }
+    );
 
-          card.classList.add("hidden");
-
-        }
-
-      });
-
-    });
 
   });
-
-
-
-  /* =====================================
-     IMAGE FULLSCREEN
-  ===================================== */
-
-  const modal =
-    document.getElementById("imageModal");
-
-  const modalImage =
-    document.getElementById("modalImage");
-
-  const closeButton =
-    document.getElementById("closeModal");
-
-  const imageButtons =
-    document.querySelectorAll(".image-button");
-
-
-  imageButtons.forEach(function(button) {
-
-    button.addEventListener("click", function() {
-
-      const image =
-        button.getAttribute("data-image");
-
-      modalImage.src = image;
-
-      modal.classList.add("show");
-
-      document.body.style.overflow = "hidden";
-
-    });
-
-  });
-
-
-
-  /* =====================================
-     CLOSE IMAGE
-  ===================================== */
-
-  function closeImage() {
-
-    modal.classList.remove("show");
-
-    modalImage.src = "";
-
-    document.body.style.overflow = "";
-
-  }
-
-
-  closeButton.addEventListener(
-    "click",
-    closeImage
-  );
-
-
-  modal.addEventListener(
-    "click",
-    function(event) {
-
-      if (event.target === modal) {
-
-        closeImage();
-
-      }
-
-    }
-  );
-
-
-
-  /* ESCAPE BUTTON */
-
-  document.addEventListener(
-    "keydown",
-    function(event) {
-
-      if (event.key === "Escape") {
-
-        closeImage();
-
-      }
-
-    }
-  );
-
-
-});
 
 </script>
 
