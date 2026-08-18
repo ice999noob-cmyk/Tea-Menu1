@@ -1,108 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Warm Teapot & Bakery Menu</title>
+  <title>عتيق شاهي ومخبوزات</title>
+  
+  <!-- Arabic Font: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     * { box-sizing: border-box; }
+    
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      /* Warm Cream Background */
-      background-color: #faf3e0; 
+      font-family: 'Cairo', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      /* Dark Wood Background */
+      background: #1a0f0b url('https://images.unsplash.com/photo-1546484475-7f7bd55792da?auto=format&fit=crop&w=1200&q=80') center/cover fixed no-repeat;
       margin: 0;
       padding: 15px;
-      /* Deep Brown Text */
-      color: #3e2723; 
+      color: #2c1a14;
     }
+
     .container {
       max-width: 480px;
       margin: 0 auto;
     }
+
     .header {
       text-align: center;
-      padding: 25px 0 10px;
-    }
-    .header h1 {
-      margin: 0;
-      font-size: 1.7rem;
-      /* Deep Caramel Brown Header */
-      color: #795548; 
-      font-weight: 800;
-    }
-    .header p {
-      margin: 5px 0 0;
-      /* Slightly muted warm brown */
-      color: #8d6e63; 
-      font-size: 0.95rem;
+      padding: 25px 15px 10px;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(5px);
     }
 
-    /* Warm Category Filter Buttons */
+    .header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #4a2810;
+      font-weight: 800;
+    }
+
+    .header p {
+      margin: 5px 0 0;
+      color: #7a4a28;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    /* Filter Buttons */
     .filter-container {
       display: flex;
       justify-content: center;
       gap: 10px;
-      margin: 20px 0;
+      margin-bottom: 20px;
     }
+
     .filter-btn {
-      /* Bright White Button */
-      background-color: #ffffff; 
-      /* Light Tan Border */
-      border: 2px solid #e0d1b6; 
-      padding: 9px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 2px solid #6e4223;
+      padding: 8px 20px;
       border-radius: 25px;
       font-size: 0.95rem;
-      font-weight: 600;
-      /* Warm Brown Text */
-      color: #5d4037; 
+      font-weight: 700;
+      color: #4a2810;
       cursor: pointer;
+      font-family: 'Cairo', sans-serif;
       transition: all 0.2s ease;
     }
-    /* Active/Hover State: Warm Gold/Caramel */
+
     .filter-btn.active, .filter-btn:hover {
-      /* Caramel Brown Background */
-      background-color: #a1887f; 
-      border-color: #a1887f;
+      background-color: #6e4223;
+      border-color: #6e4223;
       color: #ffffff;
     }
 
     /* Menu Cards */
     .menu-card {
-      /* Stark White Card */
-      background: #ffffff; 
+      background: rgba(255, 255, 255, 0.95);
       border-radius: 16px;
       overflow: hidden;
-      /* Soft shadows */
-      box-shadow: 0 4px 15px rgba(121, 85, 72, 0.1); 
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
       margin-bottom: 20px;
-      display: block;
-      transition: opacity 0.3s ease;
-    }
-    .menu-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      display: block;
-    }
-    .card-content {
-      padding: 18px;
-    }
-    .item-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .item-title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin: 0;
-      /* Deep Rich Brown Title */
-      color: #4e342e; 
+      transition: transform 0.2s ease;
     }
 
-    /* Helper class to hide items when filtered */
+    .menu-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+    }
+
+    .card-content {
+      padding: 16px;
+    }
+
+    .item-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin: 0 0 6px 0;
+      color: #3b1e0b;
+    }
+
+    .item-desc {
+      font-size: 0.9rem;
+      color: #614332;
+      margin: 0;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
     .hidden {
       display: none !important;
+    }
+
+    /* Fullscreen Modal Image Viewer */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-img {
+      max-width: 95%;
+      max-height: 85%;
+      border-radius: 12px;
+      object-fit: contain;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      color: #ffffff;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -110,111 +157,106 @@
 
   <div class="container">
     <div class="header">
-      <h1>🫖 The Warm Teapot & Bakery</h1>
-      <p>A Cozy Selection Baked fresh & Brewed Daily</p>
+      <h1>عتيق شاهي ومخبوزات</h1>
+      <p>مخبوزات طازجة ومشروبات دافئة يومياً</p>
     </div>
 
     <!-- Category Filter Buttons -->
     <div class="filter-container">
-      <button class="filter-btn active" onclick="filterMenu('all')">All</button>
-      <button class="filter-btn" onclick="filterMenu('drinks')">Drinks</button>
-      <button class="filter-btn" onclick="filterMenu('pastries')">Pastries</button>
+      <button class="filter-btn active" onclick="filterMenu('all', event)">الكل</button>
+      <button class="filter-btn" onclick="filterMenu('drinks', event)">المشروبات</button>
+      <button class="filter-btn" onclick="filterMenu('pastries', event)">الفطائر والمخبوزات</button>
     </div>
 
     <!-- PASTRIES SECTION -->
     <div class="menu-card pastries">
-      <img src="akaiw fatir.jpeg" alt="فطيره عكاوي">
+      <img src="akaiw fatir.jpeg" alt="فطيره عكاوي" onclick="openFullscreen(this.src)">
       <div class="card-content">
-        <div class="item-header">
-          <h2 class="item-title">فطيره عكاوي</h2>
-        </div>
+        <h2 class="item-title">فطيره عكاوي</h2>
+        <p class="item-desc">فطيرة مخبوزة طازجة محشوة بجبنة العكاوي الغنية.</p>
       </div>
     </div>
 
     <div class="menu-card pastries">
-      <img src="chips fatrai.jpeg" alt="فطيره شيبس">
+      <img src="chips fatrai.jpeg" alt="فطيره شيبس" onclick="openFullscreen(this.src)">
       <div class="card-content">
-        <div class="item-header">
-          <h2 class="item-title">فطيره شيبس</h2>
-        </div>
+        <h2 class="item-title">فطيره شيبس</h2>
+        <p class="item-desc">فطيرة ساخنة محشوة بالجبن ومغطاة بقطع الشيبس المقرمشة.</p>
       </div>
     </div>
 
     <div class="menu-card pastries">
-      <img src="peperion pizza.jpeg" alt="فطيره بيتزا ببروني">
+      <img src="peperion pizza.jpeg" alt="فطيره بيتزا ببروني" onclick="openFullscreen(this.src)">
       <div class="card-content">
-        <div class="item-header">
-          <h2 class="item-title">فطيره بيتزا ببروني</h2>
-        </div>
+        <h2 class="item-title">فطيره بيتزا ببروني</h2>
+        <p class="item-desc">فطيرة بيتزا بعجينة طازجة مع صوص الطماطم، الجبن، وشرائح الببروني.</p>
       </div>
     </div>
 
     <div class="menu-card pastries">
-      <img src="pizza normal.jpeg" alt="فطيره بيتزا">
+      <img src="pizza normal.jpeg" alt="فطيره بيتزا" onclick="openFullscreen(this.src)">
       <div class="card-content">
-        <div class="item-header">
-          <h2 class="item-title">فطيره بيتزا</h2>
-        </div>
+        <h2 class="item-title">فطيره بيتزا</h2>
+        <p class="item-desc">بيتزا كلاسيكية مخبوزة بصلصة الطماطم وجبنة الموزاريلا الذائبة.</p>
       </div>
     </div>
 
     <div class="menu-card pastries">
-      <img src="pizza vegtable.jpeg" alt="فطيره بيتزا خضار">
+      <img src="pizza vegtable.jpeg" alt="فطيره بيتزا خضار" onclick="openFullscreen(this.src)">
       <div class="card-content">
-        <div class="item-header">
-          <h2 class="item-title">فطيره بيتزا خضار</h2>
-        </div>
+        <h2 class="item-title">فطيره بيتزا خضار</h2>
+        <p class="item-desc">فطيرة بيتزا مشكلة بالخضار الطازجة، الزيتون، وجبنة الموزاريلا.</p>
       </div>
     </div>
 
     <div class="menu-card pastries">
-      <img src="spiacnhe fatri.jpeg" alt="فطيره سبانخ">
+      <img src="spiacnhe fatri.jpeg" alt="فطيره سبانخ" onclick="openFullscreen(this.src)">
       <div class="card-content">
-        <div class="item-header">
-          <h2 class="item-title">فطيره سبانخ</h2>
-        </div>
+        <h2 class="item-title">فطيره سبانخ</h2>
+        <p class="item-desc">فطيرة سبانخ تقليدية محشوة بالسبانخ الطازجة والسماق.</p>
       </div>
     </div>
 
     <!-- DRINKS SECTION -->
     <div class="menu-card drinks">
-      <img src="coffe dala.jpeg" alt="دله قهوه">
+      <img src="coffe dala.jpeg" alt="دله قهوه" onclick="openFullscreen(this.src)">
       <div class="card-content">
-        <div class="item-header">
-          <h2 class="item-title">دله قهوه</h2>
-        </div>
+        <h2 class="item-title">دله قهوه</h2>
+        <p class="item-desc">دلة قهوة سعودية أصيلة مع الهيل وتقدم مع التمر.</p>
       </div>
     </div>
 
     <div class="menu-card drinks">
-      <img src="kakate.jpeg" alt="كركديه">
+      <img src="kakate.jpeg" alt="كركديه" onclick="openFullscreen(this.src)">
       <div class="card-content">
-        <div class="item-header">
-          <h2 class="item-title">كركديه</h2>
-        </div>
+        <h2 class="item-title">كركديه</h2>
+        <p class="item-desc">مشروب الكركديه المنعش والأحمر الطبيعي.</p>
       </div>
     </div>
 
     <div class="menu-card drinks">
-      <img src="ice tea peach.jpeg" alt="ايستي خوخ">
+      <img src="ice tea peach.jpeg" alt="ايستي خوخ" onclick="openFullscreen(this.src)">
       <div class="card-content">
-        <div class="item-header">
-          <h2 class="item-title">ايستي خوخ</h2>
-        </div>
+        <h2 class="item-title">ايستي خوخ</h2>
+        <p class="item-desc">أيس تي بارد ومنعش بنكهة الخوخ الطبيعية.</p>
       </div>
     </div>
 
   </div>
 
-  <!-- JavaScript Filter Logic -->
+  <!-- Fullscreen Modal Container -->
+  <div id="imageModal" class="modal" onclick="closeFullscreen()">
+    <span class="close-btn">&times;</span>
+    <img id="modalImage" class="modal-img" src="" alt="Full Screen View">
+  </div>
+
   <script>
-    function filterMenu(category) {
-      // Highlight active button
+    // Filter Functionality
+    function filterMenu(category, event) {
       const buttons = document.querySelectorAll('.filter-btn');
       buttons.forEach(btn => btn.classList.remove('active'));
       event.target.classList.add('active');
 
-      // Filter cards
       const cards = document.querySelectorAll('.menu-card');
       cards.forEach(card => {
         if (category === 'all') {
@@ -227,6 +269,18 @@
           }
         }
       });
+    }
+
+    // Fullscreen Image View Functionality
+    function openFullscreen(src) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      modal.style.display = 'flex';
+      modalImg.src = src;
+    }
+
+    function closeFullscreen() {
+      document.getElementById('imageModal').style.display = 'none';
     }
   </script>
 
