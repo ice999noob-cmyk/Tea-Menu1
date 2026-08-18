@@ -4,11 +4,10 @@
 <head>
   <meta charset="UTF-8">
 
-  <meta name="viewport"
-        content="width=device-width,
-        initial-scale=1.0,
-        maximum-scale=5.0,
-        user-scalable=yes">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+  >
 
   <title>عتيق شاهي ومخبوزات</title>
 
@@ -394,6 +393,7 @@
         font-size: 1.05rem;
         padding: 12px 26px;
       }
+
     }
 
   </style>
@@ -407,7 +407,9 @@
 <div class="container">
 
 
-  <!-- HEADER -->
+  <!-- =====================================
+       HEADER
+  ====================================== -->
 
   <div class="header">
 
@@ -416,14 +418,16 @@
     </h1>
 
     <p>
-      مخبوزات طازجة ومشروبات دافئة يومياً
+      مخبوزات طازجة ومشروبات مميزة يومياً
     </p>
 
   </div>
 
 
 
-  <!-- CATEGORY BUTTONS -->
+  <!-- =====================================
+       CATEGORY BUTTONS
+  ====================================== -->
 
   <div class="filter-container">
 
@@ -438,8 +442,16 @@
     <button
       type="button"
       class="filter-btn"
-      data-filter="drinks">
-      المشروبات
+      data-filter="hot-drinks">
+      المشروبات الساخنة
+    </button>
+
+
+    <button
+      type="button"
+      class="filter-btn"
+      data-filter="cold-drinks">
+      المشروبات الباردة
     </button>
 
 
@@ -634,13 +646,13 @@
 
 
   <!-- =====================================
-       DRINKS
+       HOT DRINKS
   ====================================== -->
 
 
-  <!-- قهوة -->
+  <!-- دلة قهوة -->
 
-  <div class="menu-card drinks">
+  <div class="menu-card hot-drinks">
 
     <img
       class="menu-image"
@@ -663,9 +675,39 @@
 
 
 
+  <!-- شاي اخضر / طائفي -->
+
+  <div class="menu-card hot-drinks">
+
+    <img
+      class="menu-image"
+      src="tea taif.jpeg"
+      alt="شاي اخضر طائفي">
+
+    <div class="card-content">
+
+      <h2 class="item-title">
+        شاي اخضر / طائفي
+      </h2>
+
+      <p class="item-desc">
+        شاي أخضر عطري محضر على الطريقة الطائفية ويقدم ساخناً بنكهة منعشة.
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================
+       COLD DRINKS
+  ====================================== -->
+
+
   <!-- كركديه -->
 
-  <div class="menu-card drinks">
+  <div class="menu-card cold-drinks">
 
     <img
       class="menu-image"
@@ -679,7 +721,7 @@
       </h2>
 
       <p class="item-desc">
-        مشروب الكركديه المنعش والأحمر الطبيعي.
+        مشروب الكركديه البارد والمنعش بلونه الأحمر الطبيعي.
       </p>
 
     </div>
@@ -690,7 +732,7 @@
 
   <!-- ايس تي خوخ -->
 
-  <div class="menu-card drinks">
+  <div class="menu-card cold-drinks">
 
     <img
       class="menu-image"
@@ -716,7 +758,9 @@
 
 
 
-<!-- FULLSCREEN IMAGE -->
+<!-- =====================================
+     FULLSCREEN IMAGE
+====================================== -->
 
 <div id="imageModal" class="modal">
 
@@ -742,7 +786,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
-  /* FILTER MENU */
+  /* =====================================
+     FILTER MENU
+  ====================================== */
 
   var filterButtons =
     document.querySelectorAll(".filter-btn");
@@ -820,7 +866,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  /* FULLSCREEN IMAGES */
+  /* =====================================
+     FULLSCREEN IMAGES
+  ====================================== */
 
   var images =
     document.querySelectorAll(".menu-image");
