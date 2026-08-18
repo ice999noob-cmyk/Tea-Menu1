@@ -326,6 +326,9 @@
 
       box-shadow:
         0 7px 18px rgba(0, 0, 0, 0.42);
+
+      transition:
+        opacity 0.65s ease;
     }
 
     .section-heading h2 {
@@ -364,7 +367,23 @@
 
       transition:
         transform 0.2s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease,
+        opacity 0.65s ease;
+    }
+
+
+    /* ========================================
+       FADE-IN EFFECT
+    ======================================== */
+
+    .menu-card.fade-item,
+    .section-heading.fade-item {
+      opacity: 0;
+    }
+
+    .menu-card.fade-item.fade-visible,
+    .section-heading.fade-item.fade-visible {
+      opacity: 1;
     }
 
 
@@ -631,6 +650,23 @@
 
       box-shadow:
         0 4px 15px rgba(0, 0, 0, 0.7);
+    }
+
+
+    /* REDUCED MOTION */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .menu-card,
+      .section-heading {
+        transition: none !important;
+      }
+
+      .menu-card.fade-item,
+      .section-heading.fade-item {
+        opacity: 1;
+      }
+
     }
 
 
@@ -1598,6 +1634,104 @@ document.addEventListener(
         passive: true
       }
     );
+
+
+
+    /* =====================================
+       FADE-IN ON SCROLL
+    ====================================== */
+
+    var fadeItems =
+      document.querySelectorAll(
+        ".menu-card, .section-heading"
+      );
+
+
+    for (
+      var f = 0;
+      f < fadeItems.length;
+      f++
+    ) {
+
+      fadeItems[f]
+        .classList
+        .add("fade-item");
+
+    }
+
+
+    if (
+      "IntersectionObserver" in window
+    ) {
+
+      var fadeObserver =
+        new IntersectionObserver(
+
+          function (entries, observer) {
+
+            for (
+              var e = 0;
+              e < entries.length;
+              e++
+            ) {
+
+              if (
+                entries[e].isIntersecting
+              ) {
+
+                entries[e]
+                  .target
+                  .classList
+                  .add("fade-visible");
+
+
+                observer.unobserve(
+                  entries[e].target
+                );
+
+              }
+
+            }
+
+          },
+
+          {
+            threshold: 0.15,
+            rootMargin: "0px 0px -35px 0px"
+          }
+
+        );
+
+
+      for (
+        var o = 0;
+        o < fadeItems.length;
+        o++
+      ) {
+
+        fadeObserver.observe(
+          fadeItems[o]
+        );
+
+      }
+
+    }
+
+    else {
+
+      for (
+        var v = 0;
+        v < fadeItems.length;
+        v++
+      ) {
+
+        fadeItems[v]
+          .classList
+          .add("fade-visible");
+
+      }
+
+    }
 
 
 
