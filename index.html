@@ -9,7 +9,7 @@
     content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
   >
 
-  <!-- Fullscreen Home Screen mode for iPad/iPhone -->
+  <!-- iPad / iPhone Home Screen mode -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="عتيق">
@@ -141,7 +141,7 @@
     }
 
 
-    /* LANGUAGE */
+    /* LANGUAGE BUTTON */
 
     .language-container {
       display: flex;
@@ -218,7 +218,6 @@
       font-weight: 800;
 
       white-space: nowrap;
-
       cursor: pointer;
 
       box-shadow:
@@ -248,7 +247,7 @@
     }
 
 
-    /* COMPACT NAVIGATION */
+    /* COMPACT NAV */
 
     .sticky-controls.compact {
       padding-top: 5px;
@@ -270,7 +269,6 @@
       min-height: 38px;
 
       padding: 6px 10px;
-
       font-size: 0.75rem;
     }
 
@@ -296,7 +294,6 @@
       min-height: 38px;
 
       padding: 6px 11px;
-
       font-size: 0.75rem;
 
       flex: 0 0 auto;
@@ -312,7 +309,6 @@
       margin: 12px 0 17px;
 
       padding: 15px 18px;
-
       text-align: center;
 
       border-radius: 16px;
@@ -377,9 +373,7 @@
     }
 
 
-    /* ========================================
-       FADE-IN EFFECT
-    ======================================== */
+    /* FADE */
 
     .menu-card.fade-item,
     .section-heading.fade-item {
@@ -392,7 +386,7 @@
     }
 
 
-    /* IMAGE EFFECT */
+    /* IMAGES */
 
     .image-wrap {
       width: 100%;
@@ -458,7 +452,6 @@
 
       font-size: 0.95rem;
       line-height: 1.7;
-
       font-weight: 600;
     }
 
@@ -571,7 +564,7 @@
     }
 
 
-    /* FULL SCREEN IMAGE */
+    /* FULLSCREEN IMAGE */
 
     .modal {
       display: none;
@@ -658,24 +651,7 @@
     }
 
 
-    /* REDUCED MOTION */
-
-    @media (prefers-reduced-motion: reduce) {
-
-      .menu-card,
-      .section-heading {
-        transition: none !important;
-      }
-
-      .menu-card.fade-item,
-      .section-heading.fade-item {
-        opacity: 1;
-      }
-
-    }
-
-
-    /* MOBILE */
+    /* OLD / SMALL IPAD */
 
     @media (max-width: 480px) {
 
@@ -729,7 +705,6 @@
 
 <body>
 
-
 <div class="container">
 
 
@@ -752,8 +727,7 @@
   </div>
 
 
-
-  <!-- STICKY CONTROLS -->
+  <!-- CONTROLS -->
 
   <div
     class="sticky-controls"
@@ -761,6 +735,7 @@
   >
 
     <div class="sticky-inner">
+
 
       <div class="language-container">
 
@@ -785,7 +760,6 @@
           الكل
         </button>
 
-
         <button
           type="button"
           class="filter-btn"
@@ -795,7 +769,6 @@
           الفطائر والمخبوزات
         </button>
 
-
         <button
           type="button"
           class="filter-btn"
@@ -804,7 +777,6 @@
           data-en="Hot Drinks">
           المشروبات الساخنة
         </button>
-
 
         <button
           type="button"
@@ -823,9 +795,9 @@
 
 
 
-  <!-- =====================================
-       1. PASTRIES
-  ====================================== -->
+  <!-- ==================================================
+       PASTRIES
+  =================================================== -->
 
   <div class="section-heading">
 
@@ -879,9 +851,9 @@
 
       <div
         class="calories"
-        data-ar="تقريباً 450 سعرة حرارية"
-        data-en="Approximately 450 calories">
-        تقريباً 450 سعرة حرارية
+        data-ar="تقريباً 450 سعرة حرارية لكل قطعة"
+        data-en="Approximately 450 calories per piece">
+        تقريباً 450 سعرة حرارية لكل قطعة
       </div>
 
     </div>
@@ -924,9 +896,9 @@
 
       <div
         class="calories"
-        data-ar="تقريباً 500 سعرة حرارية"
-        data-en="Approximately 500 calories">
-        تقريباً 500 سعرة حرارية
+        data-ar="تقريباً 500 سعرة حرارية لكل قطعة"
+        data-en="Approximately 500 calories per piece">
+        تقريباً 500 سعرة حرارية لكل قطعة
       </div>
 
     </div>
@@ -969,9 +941,9 @@
 
       <div
         class="calories"
-        data-ar="تقريباً 500 سعرة حرارية"
-        data-en="Approximately 500 calories">
-        تقريباً 500 سعرة حرارية
+        data-ar="تقريباً 500 سعرة حرارية لكل قطعة"
+        data-en="Approximately 500 calories per piece">
+        تقريباً 500 سعرة حرارية لكل قطعة
       </div>
 
     </div>
@@ -1014,9 +986,9 @@
 
       <div
         class="calories"
-        data-ar="تقريباً 450 سعرة حرارية"
-        data-en="Approximately 450 calories">
-        تقريباً 450 سعرة حرارية
+        data-ar="تقريباً 450 سعرة حرارية لكل قطعة"
+        data-en="Approximately 450 calories per piece">
+        تقريباً 450 سعرة حرارية لكل قطعة
       </div>
 
     </div>
@@ -1059,9 +1031,9 @@
 
       <div
         class="calories"
-        data-ar="تقريباً 400 سعرة حرارية"
-        data-en="Approximately 400 calories">
-        تقريباً 400 سعرة حرارية
+        data-ar="تقريباً 400 سعرة حرارية لكل قطعة"
+        data-en="Approximately 400 calories per piece">
+        تقريباً 400 سعرة حرارية لكل قطعة
       </div>
 
     </div>
@@ -1104,9 +1076,9 @@
 
       <div
         class="calories"
-        data-ar="تقريباً 300 سعرة حرارية"
-        data-en="Approximately 300 calories">
-        تقريباً 300 سعرة حرارية
+        data-ar="تقريباً 300 سعرة حرارية لكل قطعة"
+        data-en="Approximately 300 calories per piece">
+        تقريباً 300 سعرة حرارية لكل قطعة
       </div>
 
     </div>
@@ -1115,9 +1087,234 @@
 
 
 
-  <!-- =====================================
-       2. HOT DRINKS
-  ====================================== -->
+  <!-- ثلاثة اجبان -->
+
+  <div class="menu-card pastries">
+
+    <div class="image-wrap">
+
+      <img
+        class="menu-image"
+        src="3 cheese.jpeg"
+        alt="فطيره ثلاثه اجبان"
+        data-ar-alt="فطيره ثلاثه اجبان"
+        data-en-alt="Three cheese pastry"
+      >
+
+    </div>
+
+    <div class="card-content">
+
+      <h2
+        class="item-title"
+        data-ar="فطيره ثلاثه اجبان"
+        data-en="Three Cheese Pastry">
+        فطيره ثلاثه اجبان
+      </h2>
+
+      <p
+        class="item-desc"
+        data-ar="فطيرة مخبوزة طازجة محشوة بمزيج غني من ثلاثة أنواع من الجبن."
+        data-en="A freshly baked pastry filled with a rich blend of three cheeses.">
+        فطيرة مخبوزة طازجة محشوة بمزيج غني من ثلاثة أنواع من الجبن.
+      </p>
+
+      <div
+        class="calories"
+        data-ar="تقريباً 520 سعرة حرارية لكل قطعة"
+        data-en="Approximately 520 calories per piece">
+        تقريباً 520 سعرة حرارية لكل قطعة
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- لبنه وعسل -->
+
+  <div class="menu-card pastries">
+
+    <div class="image-wrap">
+
+      <img
+        class="menu-image"
+        src="labena honey pie.jpeg"
+        alt="فطيره لبنه وعسل"
+        data-ar-alt="فطيره لبنه وعسل"
+        data-en-alt="Labneh and honey pastry"
+      >
+
+    </div>
+
+    <div class="card-content">
+
+      <h2
+        class="item-title"
+        data-ar="فطيره لبنه وعسل"
+        data-en="Labneh & Honey Pastry">
+        فطيره لبنه وعسل
+      </h2>
+
+      <p
+        class="item-desc"
+        data-ar="فطيرة طازجة مغطاة باللبنة الكريمية والعسل."
+        data-en="A freshly baked pastry topped with creamy labneh and honey.">
+        فطيرة طازجة مغطاة باللبنة الكريمية والعسل.
+      </p>
+
+      <div
+        class="calories"
+        data-ar="تقريباً 500 سعرة حرارية لكل قطعة"
+        data-en="Approximately 500 calories per piece">
+        تقريباً 500 سعرة حرارية لكل قطعة
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- البيستو -->
+
+  <div class="menu-card pastries">
+
+    <div class="image-wrap">
+
+      <img
+        class="menu-image"
+        src="pesto pie.jpeg"
+        alt="فطيره البيستو"
+        data-ar-alt="فطيره البيستو"
+        data-en-alt="Pesto pastry"
+      >
+
+    </div>
+
+    <div class="card-content">
+
+      <h2
+        class="item-title"
+        data-ar="فطيره البيستو"
+        data-en="Pesto Pastry">
+        فطيره البيستو
+      </h2>
+
+      <p
+        class="item-desc"
+        data-ar="فطيرة مخبوزة طازجة بنكهة البيستو المميزة."
+        data-en="A freshly baked pastry with a rich and flavorful pesto topping.">
+        فطيرة مخبوزة طازجة بنكهة البيستو المميزة.
+      </p>
+
+      <div
+        class="calories"
+        data-ar="تقريباً 450 سعرة حرارية لكل قطعة"
+        data-en="Approximately 450 calories per piece">
+        تقريباً 450 سعرة حرارية لكل قطعة
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- زعتر ولبنه -->
+
+  <div class="menu-card pastries">
+
+    <div class="image-wrap">
+
+      <img
+        class="menu-image"
+        src="zatar laben pie.jpeg"
+        alt="فطيره زعتر ولبنه"
+        data-ar-alt="فطيره زعتر ولبنه"
+        data-en-alt="Zaatar and labneh pastry"
+      >
+
+    </div>
+
+    <div class="card-content">
+
+      <h2
+        class="item-title"
+        data-ar="فطيره زعتر ولبنه"
+        data-en="Zaatar & Labneh Pastry">
+        فطيره زعتر ولبنه
+      </h2>
+
+      <p
+        class="item-desc"
+        data-ar="فطيرة طازجة تجمع بين الزعتر واللبنة الكريمية."
+        data-en="A freshly baked pastry combining aromatic zaatar with creamy labneh.">
+        فطيرة طازجة تجمع بين الزعتر واللبنة الكريمية.
+      </p>
+
+      <div
+        class="calories"
+        data-ar="تقريباً 420 سعرة حرارية لكل قطعة"
+        data-en="Approximately 420 calories per piece">
+        تقريباً 420 سعرة حرارية لكل قطعة
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- زعتر -->
+
+  <div class="menu-card pastries">
+
+    <div class="image-wrap">
+
+      <img
+        class="menu-image"
+        src="zatar pie.jpeg"
+        alt="فطيره زعتر"
+        data-ar-alt="فطيره زعتر"
+        data-en-alt="Zaatar pastry"
+      >
+
+    </div>
+
+    <div class="card-content">
+
+      <h2
+        class="item-title"
+        data-ar="فطيره زعتر"
+        data-en="Zaatar Pastry">
+        فطيره زعتر
+      </h2>
+
+      <p
+        class="item-desc"
+        data-ar="فطيرة مخبوزة طازجة ومغطاة بخلطة الزعتر التقليدية."
+        data-en="A freshly baked pastry topped with a traditional aromatic zaatar blend.">
+        فطيرة مخبوزة طازجة ومغطاة بخلطة الزعتر التقليدية.
+      </p>
+
+      <div
+        class="calories"
+        data-ar="تقريباً 330 سعرة حرارية لكل قطعة"
+        data-en="Approximately 330 calories per piece">
+        تقريباً 330 سعرة حرارية لكل قطعة
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ==================================================
+       HOT DRINKS
+  =================================================== -->
 
   <div class="section-heading">
 
@@ -1175,7 +1372,7 @@
 
 
 
-  <!-- شاي -->
+  <!-- شاي اخضر طائفي -->
 
   <div class="menu-card hot-drinks">
 
@@ -1213,9 +1410,123 @@
 
 
 
-  <!-- =====================================
-       3. COLD DRINKS
-  ====================================== -->
+  <!-- برادي طايفه -->
+
+  <div class="menu-card hot-drinks">
+
+    <div class="image-wrap">
+
+      <img
+        class="menu-image"
+        src="taif tea.jpeg"
+        alt="برادي طايفه"
+        data-ar-alt="برادي طايفه"
+        data-en-alt="Taif tea pot"
+      >
+
+    </div>
+
+    <div class="card-content">
+
+      <h2
+        class="item-title"
+        data-ar="برادي طايفه"
+        data-en="Taif Tea Pot">
+        برادي طايفه
+      </h2>
+
+      <p
+        class="item-desc"
+        data-ar="براد شاهي محضر على الطريقة الطائفية ويقدم ساخناً."
+        data-en="A pot of fragrant tea prepared in the traditional Taif style and served hot.">
+        براد شاهي محضر على الطريقة الطائفية ويقدم ساخناً.
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- شاهي قزاز -->
+
+  <div class="menu-card hot-drinks">
+
+    <div class="image-wrap">
+
+      <img
+        class="menu-image"
+        src="tea glass.jpeg"
+        alt="شاهي قزاز"
+        data-ar-alt="شاهي قزاز"
+        data-en-alt="Tea glass"
+      >
+
+    </div>
+
+    <div class="card-content">
+
+      <h2
+        class="item-title"
+        data-ar="شاهي قزاز"
+        data-en="Tea Glass">
+        شاهي قزاز
+      </h2>
+
+      <p
+        class="item-desc"
+        data-ar="كوب شاهي ساخن بطعم أصيل ومميز."
+        data-en="A hot glass of traditional tea with a rich, classic flavor.">
+        كوب شاهي ساخن بطعم أصيل ومميز.
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- شاهي برادي -->
+
+  <div class="menu-card hot-drinks">
+
+    <div class="image-wrap">
+
+      <img
+        class="menu-image"
+        src="tea kettle.jpeg"
+        alt="شاهي برادي"
+        data-ar-alt="شاهي برادي"
+        data-en-alt="Tea pot"
+      >
+
+    </div>
+
+    <div class="card-content">
+
+      <h2
+        class="item-title"
+        data-ar="شاهي برادي"
+        data-en="Tea Pot">
+        شاهي برادي
+      </h2>
+
+      <p
+        class="item-desc"
+        data-ar="براد شاهي ساخن يقدم للمشاركة بطعم الشاهي الأصيل."
+        data-en="A freshly prepared pot of hot traditional tea, perfect for sharing.">
+        براد شاهي ساخن يقدم للمشاركة بطعم الشاهي الأصيل.
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ==================================================
+       COLD DRINKS
+  =================================================== -->
 
   <div class="section-heading">
 
@@ -1345,7 +1656,7 @@
 
 
 
-<!-- IMAGE MODAL -->
+<!-- FULLSCREEN IMAGE -->
 
 <div
   id="imageModal"
@@ -1603,7 +1914,7 @@ document.addEventListener(
 
 
 
-    /* COMPACT NAV */
+    /* COMPACT STICKY MENU */
 
     var stickyControls =
       document.getElementById(
@@ -1634,17 +1945,12 @@ document.addEventListener(
 
     window.addEventListener(
       "scroll",
-      updateStickyControls,
-      {
-        passive: true
-      }
+      updateStickyControls
     );
 
 
 
-    /* =====================================
-       FADE-IN ON SCROLL
-    ====================================== */
+    /* FADE-IN */
 
     var fadeItems =
       document.querySelectorAll(
@@ -1740,7 +2046,7 @@ document.addEventListener(
 
 
 
-    /* IMAGE VIEWER */
+    /* FULLSCREEN IMAGE VIEWER */
 
     var images =
       document.querySelectorAll(
@@ -1811,6 +2117,7 @@ document.addEventListener(
       function (event) {
 
         event.stopPropagation();
+
         closeImage();
 
       }
@@ -1848,7 +2155,8 @@ document.addEventListener(
       function (event) {
 
         if (
-          event.key === "Escape"
+          event.key === "Escape" ||
+          event.keyCode === 27
         ) {
 
           closeImage();
